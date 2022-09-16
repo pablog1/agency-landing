@@ -2,28 +2,26 @@ import { VerticalFeatureRow } from '../feature/VerticalFeatureRow';
 import { Section } from '../layout/Section';
 
 const VerticalFeatures = () => (
-  <Section
-    title="Your title here"
-    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus malesuada nisi tellus, non imperdiet nisi tempor at."
-  >
+  <Section title="" description="">
     <VerticalFeatureRow
-      title="Your title here"
-      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse bibendum, nunc non posuere consectetur, justo erat semper enim, non hendrerit dui odio id enim."
+      title="Stores Built from Scratch"
+      description="We’ll guide you on your e-commerce journey and get your online store up and running on the Shopify platform."
+      image="/assets/images/feature.svg"
+      imageAlt="First feature alt text"
+      reverse
+    />
+    <VerticalFeatureRow
+      title="Custom Development"
+      description="We’ll guide you on your e-commerce journey and get your online store up and running on the Shopify platform."
       image="/assets/images/feature.svg"
       imageAlt="First feature alt text"
     />
     <VerticalFeatureRow
-      title="Your title here"
-      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse bibendum, nunc non posuere consectetur, justo erat semper enim, non hendrerit dui odio id enim."
+      title="E-commerce Optimization"
+      description="Drawing on our deep expertise in e-commerce and online marketing, we’ll review your conversion path and recommend changes to boost sales."
       image="/assets/images/feature2.svg"
       imageAlt="Second feature alt text"
       reverse
-    />
-    <VerticalFeatureRow
-      title="Your title here"
-      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse bibendum, nunc non posuere consectetur, justo erat semper enim, non hendrerit dui odio id enim."
-      image="/assets/images/feature3.svg"
-      imageAlt="Third feature alt text"
     />
   </Section>
 );

@@ -11,15 +11,19 @@ const Hero = () => {
 
       <div className="c-container mx-auto flex flex-row items-center justify-evenly  relative text-white">
         <div className="md:pr-4">
-          <div className="h1 mb-4">We DESIGN customized Web Solutions</div>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a
-            euismod ex. Interdum et malesuada fames ac ante ipsum primis in
-            faucibus. Suspendisse.
-          </p>
+          <div className="h1 mb-4">
+            We build slick e-commerce stores that look great and perform even
+            better.
+          </div>
+          <ul>
+            <li>Always amazing</li>
+            <li>Marketing setup included</li>
+            <li>Ecommerce report included</li>
+            <li>Optimal ongoing support</li>
+          </ul>
         </div>
 
-        <ContactForm title="Get a Free Quote" />
+        <ContactForm firstTitle="Let's work" secondTitle="together" />
       </div>
     </section>
   );

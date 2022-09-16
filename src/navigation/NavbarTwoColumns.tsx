@@ -2,6 +2,8 @@ import { ReactNode } from 'react';
 
 import Link from 'next/link';
 
+import { BackgroundImage } from '../background/BackgroundImage';
+
 type INavbarProps = {
   logo: ReactNode;
   children: ReactNode;
@@ -9,6 +11,10 @@ type INavbarProps = {
 
 const NavbarTwoColumns = (props: INavbarProps) => (
   <div className="flex flex-wrap justify-between items-center">
+    <BackgroundImage
+      src="/assets/images/pixelated_background.png"
+      alt="Background hero Image"
+    />
     <div className="pl-20 md:pl-0">
       <Link href="/">
         <a>{props.logo}</a>

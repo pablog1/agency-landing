@@ -6,6 +6,7 @@ import { Carousel } from '../templates/Carousel';
 import { Carouselx3 } from '../templates/Carouselx3';
 import { Hero } from '../templates/Hero';
 import { LogoGrid } from '../templates/LogoGrid';
+import { Numbers } from '../templates/Numbers';
 import { Team } from '../templates/Team';
 import { VideoWithText } from '../templates/VideoWithText';
 
@@ -83,6 +84,10 @@ const team = [
 const Index = () => (
   <>
     <Hero />
+    <Numbers />
+
+    <Base />
+
     <Benefits />
     <VideoWithText />
     <LogoGrid />
@@ -96,7 +101,6 @@ const Index = () => (
     />
     <AccordionTemp stories={stories} />
     <Team team={team} />
-    <Base />
   </>
 );
 

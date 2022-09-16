@@ -1,12 +1,15 @@
 import { Button } from '../button/Button';
 
 type ContactFormProps = {
-  title: string;
+  firstTitle: string;
+  secondTitle: string;
 };
 
 const ContactForm = (props: ContactFormProps) => (
   <form className="text-center flex flex-col p-8 my-8 bg-white rounded-md w-full max-w-md text-black  ">
-    <div className="h3 pb-4">{props.title}</div>
+    <div className="h3 pb-4">
+      <span className="text-black">{props.firstTitle}</span> {props.secondTitle}
+    </div>
     <div className="form-fields flex flex-col w-full space-y-4 ">
       <input
         required
@@ -29,13 +32,13 @@ const ContactForm = (props: ContactFormProps) => (
         placeholder="Message"
       ></textarea>
       <div className="mb-40"></div>
-      <Button>Request a Callback</Button>
+      <Button>GET IN TOUCH</Button>
     </div>
 
     <style jsx>
       {`
         .formField {
-          @apply text-black bg-transparent border-b-slate-200 border-b-2 placeholder-gray-500 focus:outline-none;
+          @apply text-black bg-transparent border-b-2 placeholder-gray-500 focus:outline-none;
         }
       `}
     </style>
