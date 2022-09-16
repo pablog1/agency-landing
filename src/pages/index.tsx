@@ -8,6 +8,7 @@ import { Hero } from '../templates/Hero';
 import { LogoGrid } from '../templates/LogoGrid';
 import { Numbers } from '../templates/Numbers';
 import { OurClients } from '../templates/OurClients';
+import { Services } from '../templates/ServicesCard';
 import { Team } from '../templates/Team';
 import { VideoWithText } from '../templates/VideoWithText';
 
@@ -88,6 +89,7 @@ const Index = () => (
     <Numbers />
     <Base />
     <OurClients />
+    <Services />
     <Benefits />
     <VideoWithText />
     <LogoGrid />
