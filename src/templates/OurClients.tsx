@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 import Image from 'next/image';
 
+// function to detect if an alement is on the viewport
 const isInViewport: any = (elem: any) => {
   const bounding = elem.getBoundingClientRect();
 
@@ -12,24 +13,24 @@ const isInViewport: any = (elem: any) => {
 };
 
 const OurClients = () => {
-  const [offset, setOffset] = useState(0); /* eslint-disable-line */ 
+  const [offset, setOffset] = useState(0);
   useEffect(() => {
-    const onScroll = () => setOffset(window.pageYOffset);
+    const onScroll = () => setOffset(offset + window.pageYOffset);
     // clean up code
     window.removeEventListener('scroll', onScroll);
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
-  }, []);
+  });
 
   if (typeof window !== 'undefined') {
     // Client-side-only code
-    const scrollElement = document.querySelector('.scroll-animation');
+    const scrollElement =
+      document.querySelector<HTMLElement>('.scroll-animation')!;
     if (isInViewport(scrollElement)) {
       // Do something...
-      const bounding = scrollElement.getBoundingClientRect(); /* eslint-disable-line */ 
+      const bounding = scrollElement.getBoundingClientRect();
       const offset2 = bounding.top;
-      // eslint-disable-next-line
-      scrollElement.style.marginLeft = `${offset2 - window.innerHeight}px`; /* eslint-disable-line */ 
+      scrollElement.style.marginLeft = `${offset2 - window.innerHeight}px`;
     }
   }
 
