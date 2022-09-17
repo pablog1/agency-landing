@@ -1,4 +1,4 @@
-import { Button } from '../button/Button';
+import { Button } from '@material-tailwind/react';
 
 type ContactFormProps = {
   firstTitle: string;
@@ -32,7 +32,7 @@ const ContactForm = (props: ContactFormProps) => (
         placeholder="Message"
       ></textarea>
       <div className="mb-40"></div>
-      <Button>GET IN TOUCH</Button>
+      <Button className="bg-primary-500">GET IN TOUCH</Button>
     </div>
 
     <style jsx>

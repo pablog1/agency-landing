@@ -20,7 +20,7 @@ const AccordionTemp = ({ stories }: any) => {
   };
   return (
     <>
-      <section className="c-container mt-12 bg-primary-400">
+      <section className="c-container mt-12 bg-primary-500">
         <div className="max-w-3xl mx-auto flex flex-col md:flex-row">
           <div className="bg-red-100 h-36 md:w-2/5 md:mr-20 mt-20">
             images images images
@@ -29,10 +29,15 @@ const AccordionTemp = ({ stories }: any) => {
             {stories.map((story: any, index: number) => {
               return (
                 <Accordion open={open === index} key={index}>
-                  <AccordionHeader onClick={() => handleOpen(index)}>
+                  <AccordionHeader
+                    onClick={() => handleOpen(index)}
+                    className="text-white"
+                  >
                     {story.title}
                   </AccordionHeader>
-                  <AccordionBody>{story.content}</AccordionBody>
+                  <AccordionBody className="text-white">
+                    {story.content}
+                  </AccordionBody>
                 </Accordion>
               );
             })}

@@ -42,7 +42,9 @@ const Header = () => (
         <div className="c-container text-center">TopBar</div>
       </div>
       <div className="c-container pt-6">
-        <NavbarTwoColumns logo={<Logo xl />}>
+        <NavbarTwoColumns
+          logo={<Logo xl textColor="text-black" iconColor="text-black" />}
+        >
           <li className="z-10">
             <Link href="/newpage">
               <a>New page</a>

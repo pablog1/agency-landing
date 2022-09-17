@@ -2,6 +2,8 @@ import { AppConfig } from '../utils/AppConfig';
 
 type ILogoProps = {
   xl?: boolean;
+  textColor: string;
+  iconColor: string;
 };
 
 const Logo = (props: ILogoProps) => {
@@ -11,9 +13,11 @@ const Logo = (props: ILogoProps) => {
     : 'font-semibold text-xl';
 
   return (
-    <span className={`text-gray-900 inline-flex items-center ${fontStyle}`}>
+    <span
+      className={`${props.textColor} inline-flex items-center ${fontStyle}`}
+    >
       <svg
-        className="text-primary-500 stroke-current mr-1"
+        className={`${props.iconColor} stroke-current mr-1`}
         xmlns="http://www.w3.org/2000/svg"
         width={size}
         height={size}
