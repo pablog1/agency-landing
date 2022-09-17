@@ -2,7 +2,7 @@ import { Number } from '../components/number';
 
 const Numbers = () => {
   return (
-    <section className="relative c-container">
+    <section className="relative c-container mt-16">
       <div className="flex flex-row justify-center relative text-black">
         <Number
           title="+20"

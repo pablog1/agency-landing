@@ -26,23 +26,23 @@ const Header = () => (
         </Link>
       </li>
     </Sidebar>
-    <section className="fixed top-0 z-10 w-full bg-white pb-6">
-      <div className="bg-black text-white">
+    <section className="fixed top-0 z-10 w-full bg-white pb-6 background">
+      <div className="bg-black text-white relative z-10">
         <div className="c-container text-center">TopBar</div>
       </div>
       <div className="c-container pt-6">
         <NavbarTwoColumns logo={<Logo xl />}>
-          <li>
+          <li className="z-10">
             <Link href="/newpage">
               <a>New page</a>
             </Link>
           </li>
-          <li>
+          <li className="z-10">
             <Link href="https://github.com/ixartz/Next-JS-Landing-Page-Starter-Template">
               <a>GitHub</a>
             </Link>
           </li>
-          <li>
+          <li className="z-10">
             <Link href="/">
               <a>Sign in</a>
             </Link>
@@ -51,6 +51,15 @@ const Header = () => (
       </div>
     </section>
     <section className="mt-[122px]"></section>
+    <style jsx>
+      {`
+        .background {
+          background: url(/assets/images/pixelated_background.png) repeat;
+          background-color: white;
+          background-position: center;
+        }
+      `}
+    </style>
   </>
 );
 

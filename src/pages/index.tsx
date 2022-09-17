@@ -1,17 +1,12 @@
 import { AboutUs } from '../templates/AboutUs';
 import { AccordionTemp } from '../templates/AccordionTemp';
-import { BannerWithBK } from '../templates/BannerWithBK';
 import { Base } from '../templates/Base';
-import { Benefits } from '../templates/Benefits';
-import { Carousel } from '../templates/Carousel';
-import { Carouselx3 } from '../templates/Carouselx3';
+import { ContactFormFooter } from '../templates/ContactFormFooter';
 import { Hero } from '../templates/Hero';
 import { LogoGrid } from '../templates/LogoGrid';
 import { Numbers } from '../templates/Numbers';
 import { OurClients } from '../templates/OurClients';
 import { Services } from '../templates/ServicesCard';
-import { Team } from '../templates/Team';
-import { VideoWithText } from '../templates/VideoWithText';
 
 const stories = [
   {
@@ -35,7 +30,7 @@ const stories = [
       'Friday is Mrs. Judsons, her marble-topped table that refuses to give up its smudges no matter how hard I polish. I used to sing along to my Walkman until someone on the 23 bus made off with my purse. Now I make up my own songs. I sing them on my knees to the walnut baseboards until their shine sings back to me. I sing through lunch, a shot of whiskey I cadge from the liquor Mrs. Judson will never miss. When I clean the bedroom, Mr. Judson smiles up at me from the glass where heâs drowning. He approves.',
   },
 ];
-
+/*
 const team = [
   {
     name: 'Pablo',
@@ -83,6 +78,7 @@ const team = [
     role: 'DEV',
   },
 ];
+*/
 
 const Index = () => (
   <>
@@ -94,7 +90,8 @@ const Index = () => (
     <LogoGrid />
     <AccordionTemp stories={stories} />
     <AboutUs />
-
+    <ContactFormFooter />
+    {/*
     <Benefits />
     <VideoWithText />
     <Carousel />
@@ -106,6 +103,7 @@ const Index = () => (
       inlineContainer={true}
     />
     <Team team={team} />
+*/}
   </>
 );
 

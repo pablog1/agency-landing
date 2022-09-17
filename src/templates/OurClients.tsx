@@ -4,12 +4,15 @@ import Image from 'next/image';
 
 // function to detect if an alement is on the viewport
 const isInViewport: any = (elem: any) => {
-  const bounding = elem.getBoundingClientRect();
+  if (elem != null) {
+    const bounding = elem.getBoundingClientRect();
 
-  return (
-    bounding.top >= 0 - elem.offsetHeight &&
-    bounding.bottom <= window.innerHeight + elem.offsetHeight * 2
-  );
+    return (
+      bounding.top >= 0 - elem.offsetHeight &&
+      bounding.bottom <= window.innerHeight + elem.offsetHeight * 2
+    );
+  }
+  return null;
 };
 
 const OurClients = () => {

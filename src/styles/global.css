@@ -5,6 +5,8 @@
 @tailwind utilities;
 
 .c-container {@apply max-w-screen-lgx2 mx-auto px-4}
+.c-container-sm {@apply max-w-screen-lgx2 mx-auto px-20}
+
 .h1 {@apply text-4xl leading-10 font-bold text-primary-400}
 .h2 {@apply text-3xl leading-8 font-bold text-primary-400}
 .h3 {@apply text-2xl font-bold text-primary-400}
