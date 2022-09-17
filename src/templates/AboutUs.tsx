@@ -3,8 +3,8 @@ import Image from 'next/image';
 const AboutUs = () => {
   return (
     <section className="relative c-container pt-12 pb-4">
-      <div className="flex flex-row justify-evenly relative text-black py-5">
-        <div className="text-center relative w-2/5">
+      <div className="flex flex-col md:flex-row md:justify-evenly relative text-black py-5">
+        <div className="relative min-h[300px] md:w-2/5">
           <Image
             layout="fill"
             className="object-center object-contain pointer-events-none"
@@ -12,7 +12,7 @@ const AboutUs = () => {
             alt="About Us"
           />
         </div>
-        <div className="md:pl-8 w-3/5">
+        <div className="md:pl-8 md:w-3/5">
           <h3 className="h2 mb-4">About Us</h3>
           <p>
             We build slick e-commerce stores and apps that look great and

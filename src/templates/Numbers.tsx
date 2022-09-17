@@ -3,7 +3,7 @@ import { Number } from '../components/number';
 const Numbers = () => {
   return (
     <section className="relative c-container mt-16">
-      <div className="flex flex-row justify-center relative text-black">
+      <div className="flex flex-col md:flex-row items-center justify-center relative text-black">
         <Number
           title="+20"
           src="/assets/images/logo_shopify_plus.png"

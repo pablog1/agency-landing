@@ -11,7 +11,7 @@ const Hero = () => {
         />
       </div>
 
-      <div className="c-container-sm mx-auto flex flex-row items-center justify-between relative">
+      <div className="c-container-sm mx-auto flex flex-col md:flex-row items-center justify-between relative">
         <div className="md:pr-4">
           <div className="h1 mb-8 max-w-lg">
             We build slick e-commerce stores that look great and perform even

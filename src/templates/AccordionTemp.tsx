@@ -21,11 +21,11 @@ const AccordionTemp = ({ stories }: any) => {
   return (
     <>
       <section className="c-container mt-12 bg-primary-400">
-        <div className="max-w-3xl mx-auto flex flex-row">
-          <div className="bg-red-100 h-36 w-2/5 mr-20 mt-20">
+        <div className="max-w-3xl mx-auto flex flex-col md:flex-row">
+          <div className="bg-red-100 h-36 md:w-2/5 md:mr-20 mt-20">
             images images images
           </div>
-          <div className="w-3/5">
+          <div className="md:w-3/5">
             {stories.map((story: any, index: number) => {
               return (
                 <Accordion open={open === index} key={index}>
