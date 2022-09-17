@@ -6,7 +6,7 @@ const Hero = () => {
     <section className="relative ">
       <div className="opacity-40">
         <BackgroundImage
-          src="/assets/images/hero_background.jpg"
+          src="/assets/images/hero_background.webp"
           alt="Background hero Image"
         />
       </div>
