@@ -1,3 +1,4 @@
+import { AboutUs } from '../templates/AboutUs';
 import { AccordionTemp } from '../templates/AccordionTemp';
 import { BannerWithBK } from '../templates/BannerWithBK';
 import { Base } from '../templates/Base';
@@ -90,9 +91,12 @@ const Index = () => (
     <Base />
     <OurClients />
     <Services />
+    <LogoGrid />
+    <AccordionTemp stories={stories} />
+    <AboutUs />
+
     <Benefits />
     <VideoWithText />
-    <LogoGrid />
     <Carousel />
     <Carouselx3 />
     <BannerWithBK
@@ -101,7 +105,6 @@ const Index = () => (
       tailwindColor="!text-primary-400" // needs !important
       inlineContainer={true}
     />
-    <AccordionTemp stories={stories} />
     <Team team={team} />
   </>
 );

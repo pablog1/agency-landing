@@ -3,7 +3,7 @@ import { ServiceCard } from '../components/serviceCard';
 const Services = () => {
   return (
     <section className="relative c-container">
-      <div className="flex flex-row justify-center relative text-black mt-16">
+      <div className="flex flex-row justify-center relative text-black mt-24">
         <ServiceCard
           title="Shopify PLUS Development"
           subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam facilisi vulputate in."
