@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 import Sidebar from '../components/sidebar';
@@ -27,6 +28,16 @@ const Header = () => (
       </li>
     </Sidebar>
     <section className="fixed top-0 z-10 w-full bg-white pb-6 background">
+      <div className="">
+        <Image
+          src="/assets/images/pixelated_background.png"
+          objectFit="cover"
+          layout="fill"
+          quality={65}
+          alt=""
+          className="background"
+        />
+      </div>
       <div className="bg-black text-white relative z-10">
         <div className="c-container text-center">TopBar</div>
       </div>
@@ -53,10 +64,13 @@ const Header = () => (
     <section className="mt-[122px]"></section>
     <style jsx>
       {`
-        .background {
-          background: url(/assets/images/pixelated_background.png) repeat;
-          background-color: white;
-          background-position: center;
+        background {
+          flex: 0 0 290px;
+          height: 190px;
+          position: relative;
+          background-size: cover;
+          background-repeat: repeat;
+          background-position: center center;
         }
       `}
     </style>
