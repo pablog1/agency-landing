@@ -6,11 +6,11 @@ type ContactFormProps = {
 };
 
 const ContactForm = (props: ContactFormProps) => (
-  <form className="text-center flex flex-col p-8 my-8 bg-white rounded-md w-full max-w-md text-black  ">
-    <div className="h3 pb-4">
+  <form className="text-center flex flex-col p-8 my-8 bg-white rounded-md w-full lg:w-2/5 text-black  ">
+    <div className="h2 pb-8">
       <span className="text-black">{props.firstTitle}</span> {props.secondTitle}
     </div>
-    <div className="form-fields flex flex-col w-full space-y-4 ">
+    <div className="form-fields flex flex-col w-full space-y-8 ">
       <input
         required
         className="formField"
@@ -32,7 +32,7 @@ const ContactForm = (props: ContactFormProps) => (
         placeholder="Message"
       ></textarea>
       <div className="mb-40"></div>
-      <Button className="bg-primary-500">GET IN TOUCH</Button>
+      <Button className="bg-primary-500 py-4 text-base ">GET IN TOUCH</Button>
     </div>
 
     <style jsx>

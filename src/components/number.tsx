@@ -7,7 +7,7 @@ type NumberProps = {
 };
 
 const Number = (props: NumberProps) => (
-  <div className="text-center py-8 w-28 mx-8 text-5xl font-bold text-primary-400">
+  <div className="text-center py-8 w-60 mx-8 text-5xl font-bold text-primary-400">
     {props.title}
     <div className="text-center py-12 relative">
       <Image

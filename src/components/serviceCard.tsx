@@ -8,11 +8,11 @@ type ServiceCardProps = {
 };
 
 const ServiceCard = (props: ServiceCardProps) => (
-  <div className="text-center py-8 w-72 mx-8 shadow-md shadow-primary-400 relative flex justify-center bg-gray-100">
-    <div className="mx-auto h-16 w-40 flex justify-center absolute -top-8">
+  <div className="text-center py-8 w-10/12 w-xl:w-80 mx-8 mb-20 shadow-md shadow-primary-400 relative flex justify-center bg-gray-100">
+    <div className="mx-auto h-16 w-60 flex justify-center absolute -top-10">
       <Image
         layout="fill"
-        className="object-center object-contain pointer-events-none w-40"
+        className="object-center object-contain pointer-events-none"
         src={props.src}
         alt={props.alt}
       />

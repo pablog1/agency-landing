@@ -13,28 +13,31 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
   const verticalFeatureClass = className(
     'mt-8',
     'flex',
-    'flex-wrap',
+    'flex-col',
+    'lg:flex-row',
     'items-center',
     'text-black',
     {
-      'flex-row-reverse': props.reverse,
+      'lg:flex-row-reverse': props.reverse,
     }
   );
 
   return (
     <div className={verticalFeatureClass}>
-      <div className="w-full sm:w-1/2 sm:px-6">
-        <h3 className="text-3xl font-semibold">{props.title}</h3>
-        <div className="mt-6 text-xl">{props.description}</div>
+      <div className="w-full lg:w-1/2 lg:px-6">
+        <h3 className="h3">{props.title}</h3>
+        <p className="mt-6">{props.description}</p>
         <div className="mt-6 font-bold">Contact Us</div>
       </div>
 
-      <div className="w-full sm:w-1/2 p-6 relative h-60">
+      <div className="w-full lg:w-1/2 pt-4 lg:p-6 relative pb-12">
         <Image
-          layout="fill"
+          layout="intrinsic"
           className="object-center object-cover pointer-events-none"
           src={props.image}
           alt={props.imageAlt}
+          width="1500"
+          height="1000"
         />
       </div>
     </div>

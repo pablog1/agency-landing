@@ -38,90 +38,91 @@ const OurClients = () => {
   }
 
   return (
-    <section className="relative bg-primary-400 p-8">
-      <div className="c-container h2 text-center mt-6 mb-4 p-5 !text-white">
+    <section className="relative bg-primary-400 mt-16 pt-6 pb-12">
+      <div className="c-container h2 text-center mt-6 mb-4 p-5 pb-8 !text-white">
         Our Clients
       </div>
       <div className="w-full relative text-black overflow-hidden whitespace-nowrap ">
         <ul className=" whitespace-nowrap w-full scroll-animation">
-          <li className="w-80 inline mx-4">
+          <li className="w-40 md:w-80 inline mx-4">
             <Image
-              layout="fixed"
               className="object-center object-cover pointer-events-none"
               src="/assets/images/team_member.jpg"
               alt="pp"
-              width="300px"
-              height="300px"
+              width="300"
+              height="300"
             />
           </li>
-          <li className="w-80 inline mx-4">
+          <li className="inline mx-4">
             <Image
-              layout="fixed"
               className="object-center object-cover pointer-events-none"
               src="/assets/images/team_member.jpg"
               alt="pp"
-              width="300px"
-              height="300px"
+              width="300"
+              height="300"
             />
           </li>
-          <li className="w-80 inline mx-4">
+          <li className="inline mx-4">
             <Image
-              layout="fixed"
               className="object-center object-cover pointer-events-none"
               src="/assets/images/team_member.jpg"
               alt="pp"
-              width="300px"
-              height="300px"
+              width="300"
+              height="300"
             />
           </li>
-          <li className="w-80 inline mx-4">
+          <li className="inline mx-4">
             <Image
-              layout="fixed"
               className="object-center object-cover pointer-events-none"
               src="/assets/images/team_member.jpg"
               alt="pp"
-              width="300px"
-              height="300px"
+              width="300"
+              height="300"
             />
           </li>
-          <li className="w-80 inline mx-4">
+          <li className="inline mx-4">
             <Image
-              layout="fixed"
               className="object-center object-cover pointer-events-none"
               src="/assets/images/team_member.jpg"
               alt="pp"
-              width="300px"
-              height="300px"
+              width="300"
+              height="300"
             />
           </li>
-          <li className="w-80 inline mx-4">
+          <li className="inline mx-4">
             <Image
-              layout="fixed"
               className="object-center object-cover pointer-events-none"
               src="/assets/images/team_member.jpg"
               alt="pp"
-              width="300px"
-              height="300px"
+              width="300"
+              height="300"
             />
           </li>
-          <li className="w-80 inline mx-4">
+          <li className="inline mx-4">
             <Image
-              layout="fixed"
               className="object-center object-cover pointer-events-none"
               src="/assets/images/team_member.jpg"
               alt="pp"
-              width="300px"
-              height="300px"
+              width="300"
+              height="300"
             />
           </li>
-          <li className="w-80 inline mx-4">
+          <li className="inline mx-4">
             <Image
-              layout="fixed"
               className="object-center object-cover pointer-events-none"
               src="/assets/images/team_member.jpg"
               alt="pp"
-              width="300px"
-              height="300px"
+              width="300"
+              height="300"
+            />
+          </li>
+          <li className="inline mx-4">
+            <Image
+              className="object-center object-cover pointer-events-none"
+              src="/assets/images/team_member.jpg"
+              alt="pp"
+              width="300"
+              height="300"
             />
           </li>
         </ul>
