@@ -33,7 +33,11 @@ const Hero = () => {
             }
           `}
         </style>
-        <ContactForm firstTitle="Let's work" secondTitle="together" />
+        <ContactForm
+          firstTitle="Let's work"
+          secondTitle="together"
+          width="w-full lg:w-2/5"
+        />
       </div>
     </section>
   );

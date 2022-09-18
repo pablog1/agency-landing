@@ -3,10 +3,13 @@ import { Button } from '@material-tailwind/react';
 type ContactFormProps = {
   firstTitle: string;
   secondTitle: string;
+  width: string;
 };
 
 const ContactForm = (props: ContactFormProps) => (
-  <form className="text-center flex flex-col p-8 my-8 bg-white rounded-md w-full lg:w-2/5 text-black  ">
+  <form
+    className={`${props.width} text-center flex flex-col p-8 my-8 bg-white rounded-md text-black `}
+  >
     <div className="h2 pb-8">
       <span className="text-black">{props.firstTitle}</span> {props.secondTitle}
     </div>

@@ -5,6 +5,7 @@ import {
   AccordionHeader,
   AccordionBody,
 } from '@material-tailwind/react';
+import Image from 'next/image';
 
 /*
 let stories: {
@@ -20,23 +21,29 @@ const AccordionTemp = ({ stories }: any) => {
   };
   return (
     <>
-      <section className="c-container mt-12 bg-primary-500">
-        <div className="max-w-3xl mx-auto flex flex-col md:flex-row">
-          <div className="bg-red-100 h-36 md:w-2/5 md:mr-20 mt-20">
-            images images images
+      <section className="c-container mt-12 py-8 bg-primary-500">
+        <div className="mx-auto flex flex-col lg:flex-row">
+          <div className="lg:w-2/5 lg:mr-20 relative">
+            <Image
+              className="object-center object-conver pointer-events-none"
+              src="/assets/images/box.jpg"
+              alt="FAQ"
+              width="800"
+              height="600"
+            />
           </div>
-          <div className="md:w-3/5">
+          <div className="w-full lg:w-3/5">
             {stories.map((story: any, index: number) => {
               return (
                 <Accordion open={open === index} key={index}>
                   <AccordionHeader
                     onClick={() => handleOpen(index)}
-                    className="text-white"
+                    className="text-white hover:text-white text-left"
                   >
                     {story.title}
                   </AccordionHeader>
                   <AccordionBody className="text-white">
-                    {story.content}
+                    <p> {story.content}</p>
                   </AccordionBody>
                 </Accordion>
               );
