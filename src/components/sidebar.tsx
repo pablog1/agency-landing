@@ -1,5 +1,7 @@
 import { useState, ReactNode, useEffect } from 'react';
 
+import classNames from 'classnames';
+
 type INavbarProps = {
   children: ReactNode;
 };
@@ -13,13 +15,14 @@ const Sidebar = (props: INavbarProps) => {
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
+
   return (
     <>
       {showSidebar ? (
         <button
           className={`${
-            offset > 30 ? `header-small` : `header-big`
-          } transition duration-300  flex text-5xl  text-primary-400 items-center cursor-pointer fixed left-[23px] z-50 `}
+            offset > 30 ? `header-small-x` : `header-big-x`
+          } flex text-5xl  text-primary-400 items-center cursor-pointer fixed left-[23px] z-50 `}
           onClick={() => setShowSidebar(!showSidebar)}
         >
           x
@@ -41,11 +44,20 @@ const Sidebar = (props: INavbarProps) => {
       )}
 
       <div
-        className={`top-0 left-[-160vw] w-[80vw] bg-gray-200  p-10 pl-6 text-white fixed h-full z-40  ease-in-out duration-300 ${
-          showSidebar ? 'translate-x-[160vw] ' : 'translate-x-full'
-        }`}
+        className={classNames(
+          'left-[-160vw] w-[80vw] bg-gray-200  p-10 pl-6 text-white fixed h-full z-40 ease-in-out duration-300',
+          {
+            'header-small-menu': offset > 30,
+            'header-big-menu': offset <= 30,
+            'translate-x-[160vw]': showSidebar === true,
+            'translate-x-full': showSidebar === false,
+          }
+        )}
       >
-        <ul className="mt-20 text-2xl font-semibold text-black">
+        <ul
+          className="text-2xl font-semibold text-black"
+          onClick={() => setShowSidebar(!showSidebar)}
+        >
           {props.children}
         </ul>
       </div>
@@ -57,6 +69,22 @@ const Sidebar = (props: INavbarProps) => {
           }
           .header-small {
             top: 0.5rem;
+            transition: 150ms ease;
+          }
+          .header-big-x {
+            top: 1.7rem;
+            transition: 150ms ease;
+          }
+          .header-small-x {
+            top: -0.7rem;
+            transition: 150ms ease;
+          }
+          .header-big-menu {
+            top: 6.8rem;
+            transition: 150ms ease;
+          }
+          .header-small-menu {
+            top: 3.8rem;
             transition: 150ms ease;
           }
           ul {

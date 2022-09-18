@@ -24,6 +24,11 @@ const Header = () => {
       <Meta title={AppConfig.title} description={AppConfig.description} />
       <Sidebar>
         <li>
+          <Link href="/">
+            <a>Home</a>
+          </Link>
+        </li>
+        <li>
           <Link href="/newpage">
             <a>New page</a>
           </Link>
