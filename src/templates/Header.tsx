@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
+import classNames from 'classnames';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -22,6 +23,7 @@ const Header = () => {
   return (
     <>
       <Meta title={AppConfig.title} description={AppConfig.description} />
+
       <Sidebar>
         <li>
           <Link href="/">
@@ -48,9 +50,13 @@ const Header = () => {
         <div className="c-container text-center">TopBar</div>
       </section>
       <section
-        className={`${
-          offset > 30 ? `header-padding-small` : `header-padding-big`
-        } transition duration-300  sticky top-0 w-full bg-white background z-10`}
+        className={classNames(
+          'transition duration-300  sticky top-0 w-full bg-white background z-10',
+          {
+            'header-padding-small': offset > 0,
+            'header-padding-big': offset === 0,
+          }
+        )}
       >
         <style jsx>
           {`

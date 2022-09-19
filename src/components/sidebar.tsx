@@ -21,7 +21,7 @@ const Sidebar = (props: INavbarProps) => {
       {showSidebar ? (
         <button
           className={`${
-            offset > 30 ? `header-small-x` : `header-big-x`
+            offset > 0 ? `header-small-x` : `header-big-x`
           } flex text-5xl  text-primary-400 items-center cursor-pointer fixed left-[23px] z-50 `}
           onClick={() => setShowSidebar(!showSidebar)}
         >
@@ -31,7 +31,7 @@ const Sidebar = (props: INavbarProps) => {
         <svg
           onClick={() => setShowSidebar(!showSidebar)}
           className={`${
-            offset > 30 ? `header-small` : `header-big`
+            offset > 0 ? `header-small` : `header-big`
           } fill-primary-400 md:hidden fixed z-30 flex items-center cursor-pointer left-4 top-14`}
           viewBox="0 0 100 80"
           width="40"
@@ -47,8 +47,8 @@ const Sidebar = (props: INavbarProps) => {
         className={classNames(
           'left-[-160vw] w-[80vw] bg-gray-200  p-10 pl-6 text-white fixed h-full z-40 ease-in-out duration-300',
           {
-            'header-small-menu': offset > 30,
-            'header-big-menu': offset <= 30,
+            'header-small-menu': offset > 0,
+            'header-big-menu': offset === 0,
             'translate-x-[160vw]': showSidebar === true,
             'translate-x-full': showSidebar === false,
           }
