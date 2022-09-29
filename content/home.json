@@ -1,5 +1,16 @@
 {
   "date": "2022-09-29T14:34:31.903Z",
   "body": "H﻿ola **mundo**\n\nE﻿sto es un texto hecho con markdown",
-  "title": "Titulo!"
+  "title": "Titulo!",
+  "hero": {
+    "birthdate": "09/14/2022",
+    "heading": "That's the Heading",
+    "subheading": "That's the Subheading",
+    "name": "aaaa",
+    "address": {
+      "street": "asadf",
+      "city": "sdf",
+      "post-code": "333"
+    }
+  }
 }
