@@ -16,9 +16,15 @@ collections:
         - label: "Hero"
           name: "hero"
           widget: "object"
-          summary: '{{fields.title}}'
+          summary: '{{fields.heading}}'
           fields:
             - {label: "Heading", name: "heading", widget: "string"}
             - {label: "Subheading", name: "subheading", widget: "string"}
             - {label: "Background Image", name: "background_image", widget: "image"}
+            - {label: "Benefits", name: "benefits", widget: "list",
+              fields:
+                 - {label: "icon", name: "icon", widget: "image"}
+                 - {label: "Title", name: "title", widget: "string"}
+              }
+
       
