@@ -1,7 +1,7 @@
 import { BackgroundImage } from '../background/BackgroundImage';
 import { ContactForm } from '../components/ContactForm';
 
-const Hero = () => {
+const Hero = ({ content }: any) => {
   return (
     <section className="relative ">
       <div className="opacity-40">
@@ -13,10 +13,7 @@ const Hero = () => {
 
       <div className="c-container mx-auto flex flex-col lg:flex-row items-center justify-between relative">
         <div className="lg:w-3/5 lg:pr-4 pt-8">
-          <div className="h1 mb-8 ">
-            We build slick e-commerce stores that look great and perform even
-            better.
-          </div>
+          <div className="h1 mb-8 ">{content.heading}</div>
           <ul className="font-bold">
             <li>Always amazing</li>
             <li>Marketing setup included</li>

@@ -1,3 +1,5 @@
+import fs from 'fs';
+
 import { AboutUs } from '../templates/AboutUs';
 import { AccordionTemp } from '../templates/AccordionTemp';
 import { Base } from '../templates/Base';
@@ -80,9 +82,19 @@ const team = [
 ];
 */
 
-const Index = () => (
+export const getStaticProps = async () => {
+  const jsonFile = JSON.parse(fs.readFileSync('content/home.json').toString());
+  const { hero } = jsonFile;
+
+  return {
+    props: {
+      hero,
+    },
+  };
+};
+const Index = (props: { hero: any }) => (
   <>
-    <Hero />
+    <Hero content={props.hero} />
     <Numbers />
     <Base />
     <OurClients />
