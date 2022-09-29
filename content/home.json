@@ -30,6 +30,7 @@
         "icon": "img/tick_icon.svg",
         "title": "Optimal ongoing support"
       }
-    ]
+    ],
+    "benefits_icon": "img/tick_icon.svg"
   }
 }
