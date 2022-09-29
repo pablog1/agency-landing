@@ -12,6 +12,24 @@
       "city": "sdf",
       "post-code": "333"
     },
-    "background_image": "img/aece-banner.jpg"
+    "background_image": "img/aece-banner.jpg",
+    "benefits": [
+      {
+        "icon": "img/tick_icon.svg",
+        "title": "Always amazing"
+      },
+      {
+        "icon": "img/tick_icon.svg",
+        "title": "Marketing setup included"
+      },
+      {
+        "icon": "img/tick_icon.svg",
+        "title": "Ecommerce report included"
+      },
+      {
+        "icon": "img/tick_icon.svg",
+        "title": "Optimal ongoing support"
+      }
+    ]
   }
 }
