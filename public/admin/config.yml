@@ -13,12 +13,14 @@ collections:
       format: "json"
       fields:
       
-        - label: "Profile"
-          name: "profile"
+        - label: "Hero"
+          name: "hero"
           widget: "object"
-          summary: '{{fields.name}}: {{fields.birthdate}}'
+          summary: '{{fields.title}}'
           fields:
-            - {label: "Public", name: "public", widget: "boolean", default: true}
+            - {label: "Heading", name: "heading", widget: "string"}
+            - {label: "Subheading", name: "subheading", widget: "string"}
+
             - {label: "Name", name: "name", widget: "string"}
             - label: "Birthdate"
               name: "birthdate"
