@@ -15,16 +15,15 @@ const Hero = ({ content }: any) => {
         <div className="lg:w-3/5 lg:pr-4 pt-8">
           <div className="h1 mb-8 ">{content.heading}</div>
           <ul className="font-bold">
-            <li>Always amazing</li>
-            <li>Marketing setup included</li>
-            <li>Ecommerce report included</li>
-            <li>Optimal ongoing support</li>
+            {Object.keys(content.benefits).map((keyName, i) => (
+              <li key={i}>{content.benefits[keyName].title}</li>
+            ))}
           </ul>
         </div>
         <style jsx>
           {`
             li {
-              background: url(/assets/images/tick_icon.svg) no-repeat left top;
+              background: url(/${content.benefits_icon}) no-repeat left top;
               padding-left: 30px;
               margin-bottom: 10px;
             }

@@ -21,10 +21,10 @@ collections:
             - {label: "Heading", name: "heading", widget: "string"}
             - {label: "Subheading", name: "subheading", widget: "string"}
             - {label: "Background Image", name: "background_image", widget: "image"}
+            - {label: "Benefits icon", name: "benefits_icon", widget: "image"}
             - label: "Benefits"
               name: "benefits"
               widget: "list"
               fields:
-                 - {label: "icon", name: "icon", widget: "image"}
                  - {label: "Title", name: "title", widget: "string"}
                  
