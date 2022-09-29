@@ -7,9 +7,10 @@ collections:
   - name: "pages"
     label: "Pages"
     files:
-    - label: "Home"
+    - label: "Home2"
       name: "home"
-      file: "content/home.md"
+      file: "content/home.json"
+      format: "json"
       fields:
         - { label: "Title", name: "title", widget: "string"}
         - { label: "Publish Date", name: "date", widget: "datetime" }
