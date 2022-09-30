@@ -108,7 +108,6 @@ collections:
               fields:
                  - {label: "Question", name: "question", widget: "string"}
                  - {label: "Answer", name: "answer", widget: "markdown"}
-
         - label: "About"
           name: "about"
           widget: "object"
