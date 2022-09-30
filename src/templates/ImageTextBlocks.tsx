@@ -1,8 +1,7 @@
-import { VerticalFeatureRow } from '../feature/VerticalFeatureRow';
-import { Section } from '../layout/Section';
+import { VerticalFeatureRow } from '../components/VerticalFeatureRow';
 
-const VerticalFeatures = () => (
-  <Section title="" description="" yPadding="py-4">
+const ImageTextBlocks = () => (
+  <section className="antialiased text-gray-600 c-container">
     <VerticalFeatureRow
       title="Stores Built from Scratch"
       description="We’ll guide you on your e-commerce journey and get your online store up and running on the Shopify platform."
@@ -23,7 +22,7 @@ const VerticalFeatures = () => (
       imageAlt="Second feature alt text"
       reverse
     />
-  </Section>
+  </section>
 );
 
-export { VerticalFeatures };
+export { ImageTextBlocks };

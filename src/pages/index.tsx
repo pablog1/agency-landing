@@ -2,9 +2,9 @@ import fs from 'fs';
 
 import { AboutUs } from '../templates/AboutUs';
 import { AccordionTemp } from '../templates/AccordionTemp';
-import { Base } from '../templates/Base';
 import { ContactFormFooter } from '../templates/ContactFormFooter';
 import { Hero } from '../templates/Hero';
+import { ImageTextBlocks } from '../templates/ImageTextBlocks';
 import { LogoGrid } from '../templates/LogoGrid';
 import { Numbers } from '../templates/Numbers';
 import { OurClients } from '../templates/OurClients';
@@ -49,7 +49,7 @@ const Index = (props: { hero: any; numbers: any }) => (
   <>
     <Hero content={props.hero} />
     <Numbers content={props.numbers} />
-    <Base />
+    <ImageTextBlocks />
     <OurClients />
     <Services />
     <LogoGrid />
