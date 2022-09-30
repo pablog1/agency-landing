@@ -1,24 +1,17 @@
 import { Number } from '../components/number';
 
-const Numbers = () => {
+const Numbers = ({ content }: any) => {
   return (
     <section className="relative c-container mt-16">
       <div className="flex flex-col md:flex-row items-center justify-center relative text-black">
-        <Number
-          title="+20"
-          src="/assets/images/logo_shopify_plus.png"
-          alt="Shopify Plus"
-        />
-        <Number
-          title="+100"
-          src="/assets/images/logo_shopify_partners.png"
-          alt="Shopify Partners"
-        />
-        <Number
-          title="+25"
-          src="/assets/images/logo_shopify.png"
-          alt="Shopify"
-        />
+        {Object.keys(content.number).map((keyName, i) => (
+          <Number
+            key={i}
+            title={content.numbers[keyName].number}
+            src={`/${content.image}`}
+            alt="xxxx"
+          />
+        ))}
       </div>
     </section>
   );

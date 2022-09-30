@@ -32,70 +32,23 @@ const stories = [
       'We’ll guide you on your e-commerce journey and get your online store up and running on the Shopify platform. We’ll guide you on your e-commerce journey and get your online store up and running on the Shopify platform. We’ll guide you on your e-commerce journey and get your online store up and running on the Shopify platform. We’ll guide you on your e-commerce journey and get your online store up and running on the Shopify platform. We’ll guide you on your e-commerce journey and get your online store up and running on the Shopify platform.',
   },
 ];
-/*
-const team = [
-  {
-    name: 'Pablo',
-    src: '/assets/images/team_member.jpg',
-    role: 'CEO',
-  },
-  {
-    name: 'Oscar',
-    src: '/assets/images/team_member.jpg',
-    role: 'CTO',
-  },
-  {
-    name: 'Juana',
-    src: '/assets/images/team_member.jpg',
-    role: 'DEV',
-  },
-  {
-    name: 'Pablo',
-    src: '/assets/images/team_member.jpg',
-    role: 'CEO',
-  },
-  {
-    name: 'Oscar',
-    src: '/assets/images/team_member.jpg',
-    role: 'CTO',
-  },
-  {
-    name: 'Juana',
-    src: '/assets/images/team_member.jpg',
-    role: 'DEV',
-  },
-  {
-    name: 'Pablo',
-    src: '/assets/images/team_member.jpg',
-    role: 'CEO',
-  },
-  {
-    name: 'Oscar',
-    src: '/assets/images/team_member.jpg',
-    role: 'CTO',
-  },
-  {
-    name: 'Juana',
-    src: '/assets/images/team_member.jpg',
-    role: 'DEV',
-  },
-];
-*/
 
 export const getStaticProps = async () => {
   const jsonFile = JSON.parse(fs.readFileSync('content/home.json').toString());
   const { hero } = jsonFile;
+  const { numbers } = jsonFile;
 
   return {
     props: {
       hero,
+      numbers,
     },
   };
 };
-const Index = (props: { hero: any }) => (
+const Index = (props: { hero: any; numbers: any }) => (
   <>
     <Hero content={props.hero} />
-    <Numbers />
+    <Numbers content={props.numbers} />
     <Base />
     <OurClients />
     <Services />

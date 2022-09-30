@@ -34,8 +34,10 @@ collections:
           collapsed: true
           fields:
             - label: "Number"
-              name: "benefits"
+              name: "numbers"
               widget: "list"
               fields:
                  - {label: "Number", name: "number", widget: "string"}
                  - {label: "Image", name: "image", widget: "image"}
+                 - {label: "Name (alt text)", name: "name", widget: "string"}
+
