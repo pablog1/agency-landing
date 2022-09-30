@@ -112,10 +112,10 @@ collections:
           name: "about"
           widget: "object"
           collapsed: true
+          fields:
             - label: "block"
               name: "block"
               widget: "list"
-              fields:
                 - {label: "Heading", name: "heading", widget: "string"}
                 - {label: "Image", name: "image", widget: "image"}
                 - {label: "Alt text", name: "alt_text", widget: "string"}
