@@ -51,5 +51,23 @@
         "name": "Shopify plus"
       }
     ]
+  },
+  "images_text": {
+    "block": [
+      {
+        "image": "img/box.jpg",
+        "alt_text": "image alt",
+        "heading": "Stores Built from Scratch",
+        "description": "We’ll guide you on **your e-commerce** journey and get your online store up and running on the Shopify platform.\n\nT﻿est",
+        "reverse": false
+      },
+      {
+        "image": "img/box.jpg",
+        "alt_text": "ffff",
+        "heading": "Custom Development",
+        "description": "We’ll guide you on your **e-commerce journey and get your** online store up and running on the Shopify platform.\n\nt﻿est",
+        "reverse": true
+      }
+    ]
   }
 }
