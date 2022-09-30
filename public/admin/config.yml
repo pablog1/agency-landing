@@ -40,4 +40,17 @@ collections:
                  - {label: "Number", name: "number", widget: "string"}
                  - {label: "Image", name: "image", widget: "image"}
                  - {label: "Name (alt text)", name: "name", widget: "string"}
-
+        - label: "Images with text"
+          name: "images_text"
+          widget: "object"
+          collapsed: true
+          fields:
+            - label: "Block"
+              name: "block"
+              widget: "list"
+              fields:
+                 - {label: "Image", name: "image", widget: "image"}
+                 - {label: "Alt text", name: "alt_text", widget: "string"}
+                 - {label: "Heading", name: "heading", widget: "string"}
+                 - {label: "Description", name: "description", widget: "markdown"}
+                 - {label: "Reverse", name: "reverse", widget: "boolean"}
