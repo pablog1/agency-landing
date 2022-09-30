@@ -43,6 +43,23 @@
         "number": "50",
         "image": "img/logo_shopify_partners.png"
       }
+    ],
+    "numbers": [
+      {
+        "number": "20",
+        "image": "img/logo_shopify.png",
+        "name": "Shopify"
+      },
+      {
+        "number": "50",
+        "image": "img/logo_shopify_partners.png",
+        "name": "Shopify Partner"
+      },
+      {
+        "number": "80",
+        "image": "img/logo_shopify_plus.png",
+        "name": "Shopify plus"
+      }
     ]
   }
 }
