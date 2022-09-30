@@ -56,3 +56,17 @@ collections:
                  - {label: "Description", name: "description", widget: "markdown"}
                  - {label: "CTA Text", name: "cta_text", widget: "string", default: "Contact Us"}
                  - {label: "Reverse", name: "reverse", widget: "boolean", default: false}
+
+        - label: "Our clients"
+          name: "ourClients"
+          widget: "object"
+          summary: '{{fields.heading}}'
+          collapsed: true
+          fields:
+            - {label: "Heading", name: "heading", widget: "string"}
+            - label: "Clients"
+              name: "clients"
+              widget: "list"
+              fields:
+                 - {label: "Image", name: "image", widget: "image"}
+                 - {label: "Alt text", name: "alt_text", widget: "string"}
