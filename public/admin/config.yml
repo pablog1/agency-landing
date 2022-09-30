@@ -94,3 +94,17 @@ collections:
               fields:
                  - {label: "Image", name: "image", widget: "image"}
                  - {label: "Alt text", name: "alt_text", widget: "string"}
+        - label: "FAQ"
+          name: "faq"
+          widget: "object"
+          collapsed: true
+          fields:
+            - {label: "Heading", name: "heading", widget: "string"}
+            - {label: "Image", name: "image", widget: "image"}
+            - {label: "Alt text", name: "alt_text", widget: "string"}
+            - label: "faq"
+              name: "faq"
+              widget: "list"
+              fields:
+                 - {label: "Question", name: "question", widget: "string"}
+                 - {label: "Answer", name: "answer", widget: "string"}
