@@ -108,3 +108,16 @@ collections:
               fields:
                  - {label: "Question", name: "question", widget: "string"}
                  - {label: "Answer", name: "answer", widget: "markdown"}
+
+        - label: "About"
+          name: "about"
+          widget: "object"
+          collapsed: true
+            - label: "block"
+              name: "block"
+              widget: "list"
+              fields:
+                - {label: "Heading", name: "heading", widget: "string"}
+                - {label: "Image", name: "image", widget: "image"}
+                - {label: "Alt text", name: "alt_text", widget: "string"}
+                - {label: "Text", name: "text", widget: "markdown"}
