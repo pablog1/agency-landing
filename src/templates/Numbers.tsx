@@ -1,6 +1,7 @@
 import { Number } from '../components/number';
 
-const Numbers = () => {
+const Numbers = ({ content }: any) => {
+  console.log(content);
   return (
     <section className="relative c-container mt-16">
       <div className="flex flex-col md:flex-row items-center justify-center relative text-black">
