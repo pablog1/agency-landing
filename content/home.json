@@ -112,5 +112,27 @@
         "alt_text": "client9"
       }
     ]
+  },
+  "services": {
+    "service": [
+      {
+        "image": "img/logo_shopify_plus.png",
+        "alt_text": "Shopify plus",
+        "heading": "Shopify PLUS Development",
+        "subheading": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam facilisi vulputate in."
+      },
+      {
+        "image": "img/logo_shopify_partners.png",
+        "alt_text": "Shopify Partner",
+        "heading": "Monthly Website Support",
+        "subheading": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam facilisi vulputate in."
+      },
+      {
+        "image": "img/logo_shopify.png",
+        "alt_text": "Shopify ",
+        "heading": "Shopify Development",
+        "subheading": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam facilisi vulputate in."
+      }
+    ]
   }
 }
