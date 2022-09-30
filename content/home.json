@@ -71,5 +71,46 @@
         "cta_text": "Contact Us"
       }
     ]
+  },
+  "ourClients": {
+    "heading": "Our clients",
+    "clients": [
+      {
+        "image": "img/team_member.jpg",
+        "alt_text": "client1"
+      },
+      {
+        "image": "img/team_member.jpg",
+        "alt_text": "client2"
+      },
+      {
+        "image": "img/team_member.jpg",
+        "alt_text": "client3"
+      },
+      {
+        "image": "img/team_member.jpg",
+        "alt_text": "client4"
+      },
+      {
+        "image": "img/team_member.jpg",
+        "alt_text": "client5"
+      },
+      {
+        "image": "img/team_member.jpg",
+        "alt_text": "client6"
+      },
+      {
+        "image": "img/team_member.jpg",
+        "alt_text": "client7"
+      },
+      {
+        "image": "img/team_member.jpg",
+        "alt_text": "client8"
+      },
+      {
+        "image": "img/team_member.jpg",
+        "alt_text": "client9"
+      }
+    ]
   }
 }
