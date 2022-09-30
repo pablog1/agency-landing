@@ -76,6 +76,29 @@
       }
     ]
   },
+  "faq": {
+    "heading": "FAQs",
+    "image": "img/box.jpg",
+    "alt_text": "image",
+    "question": [
+      {
+        "question": "Can you help us with for our ecommerce website?",
+        "answer": "We’ll guide you on your e-commerce journey and get your online store up and running on the Shopify platform. **We’ll guide you on your e-commerce** journey and get your online store up and running on the Shopify platform. We’ll guide you on your e-commerce journey and get your online store up and running on the Shopify platform."
+      },
+      {
+        "question": "Can you help us with support for our ecommerce website?",
+        "answer": "We’ll guide you on your e-commerce journey and get your online store up and running on the Shopify platform. **We’ll guide you on your e-commerce** journey and get your online store up and running on the Shopify platform. We’ll guide you on your e-commerce journey and get your online store up and running on the Shopify platform."
+      },
+      {
+        "question": "Can you help us support for our ecommerce website?",
+        "answer": "We’ll guide you on your e-commerce journey and get your online store up and running on the Shopify platform. **We’ll guide you on your e-commerce** journey and get your online store up and running on the Shopify platform. We’ll guide you on your e-commerce journey and get your online store up and running on the Shopify platform."
+      },
+      {
+        "question": "Can you help us support for our ecommerce website?",
+        "answer": "We’ll guide you on your e-commerce journey and get your online store up and running on the Shopify platform. **We’ll guide you on your e-commerce** journey and get your online store up and running on the Shopify platform. We’ll guide you on your e-commerce journey and get your online store up and running on the Shopify platform."
+      }
+    ]
+  },
   "title": "Titulo!",
   "hero": {
     "birthdate": "09/14/2022",
