@@ -41,6 +41,7 @@ export const getStaticProps = async () => {
   const { images_text } = jsonFile;
   const { ourClients } = jsonFile;
   const { services } = jsonFile;
+  const { someApps } = jsonFile;
 
   return {
     props: {
@@ -49,6 +50,7 @@ export const getStaticProps = async () => {
       images_text,
       ourClients,
       services,
+      someApps,
     },
   };
 };
@@ -58,6 +60,7 @@ const Index = (props: {
   images_text: any;
   ourClients: any;
   services: any;
+  someApps: any;
 }) => (
   <>
     <Hero content={props.hero} />
@@ -65,7 +68,7 @@ const Index = (props: {
     <ImageTextBlocks content={props.images_text.block} />
     <OurClients content={props.ourClients} />
     <Services content={props.services} />
-    <LogoGrid />
+    <LogoGrid content={props.someApps} />
     <AccordionTemp stories={stories} />
     <AboutUs />
     <ContactFormFooter />

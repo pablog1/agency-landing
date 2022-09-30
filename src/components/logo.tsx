@@ -6,7 +6,7 @@ type LogoProps = {
 };
 
 const Logo = (props: LogoProps) => (
-  <div className="text-center p-4 border-2 border-black rounded-md relative">
+  <div className="text-center p-4 border-2 border-black rounded-md relative bg-white">
     <Image
       className="object-center object-contain pointer-events-none"
       src={props.src}
