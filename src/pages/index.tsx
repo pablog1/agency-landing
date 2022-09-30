@@ -10,29 +10,6 @@ import { Numbers } from '../templates/Numbers';
 import { OurClients } from '../templates/OurClients';
 import { Services } from '../templates/ServicesCard';
 
-const stories = [
-  {
-    title: 'Can you help us with for our ecommerce website?',
-    content:
-      'We’ll guide you on your e-commerce journey and get your online store up and running on the Shopify platform. We’ll guide you on your e-commerce journey and get your online store up and running on the Shopify platform. We’ll guide you on your e-commerce journey and get your online store up and running on the Shopify platform. We’ll guide you on your e-commerce journey and get your online store up and running on the Shopify platform. We’ll guide you on your e-commerce journey and get your online store up and running on the Shopify platform.',
-  },
-  {
-    title: 'Can you help us with support for our ecommerce website?',
-    content:
-      'We’ll guide you on your e-commerce journey and get your online store up and running on the Shopify platform. We’ll guide you on your e-commerce journey and get your online store up and running on the Shopify platform. We’ll guide you on your e-commerce journey and get your online store up and running on the Shopify platform. We’ll guide you on your e-commerce journey and get your online store up and running on the Shopify platform. We’ll guide you on your e-commerce journey and get your online store up and running on the Shopify platform.',
-  },
-  {
-    title: 'Can you help us support for our ecommerce website?',
-    content:
-      'We’ll guide you on your e-commerce journey and get your online store up and running on the Shopify platform. We’ll guide you on your e-commerce journey and get your online store up and running on the Shopify platform. We’ll guide you on your e-commerce journey and get your online store up and running on the Shopify platform. We’ll guide you on your e-commerce journey and get your online store up and running on the Shopify platform. We’ll guide you on your e-commerce journey and get your online store up and running on the Shopify platform.',
-  },
-  {
-    title: 'Can you help support for our ecommerce website?',
-    content:
-      'We’ll guide you on your e-commerce journey and get your online store up and running on the Shopify platform. We’ll guide you on your e-commerce journey and get your online store up and running on the Shopify platform. We’ll guide you on your e-commerce journey and get your online store up and running on the Shopify platform. We’ll guide you on your e-commerce journey and get your online store up and running on the Shopify platform. We’ll guide you on your e-commerce journey and get your online store up and running on the Shopify platform.',
-  },
-];
-
 export const getStaticProps = async () => {
   const jsonFile = JSON.parse(fs.readFileSync('content/home.json').toString());
   const { hero } = jsonFile;
@@ -42,6 +19,7 @@ export const getStaticProps = async () => {
   const { ourClients } = jsonFile;
   const { services } = jsonFile;
   const { someApps } = jsonFile;
+  const { faq } = jsonFile;
 
   return {
     props: {
@@ -51,6 +29,7 @@ export const getStaticProps = async () => {
       ourClients,
       services,
       someApps,
+      faq,
     },
   };
 };
@@ -61,6 +40,7 @@ const Index = (props: {
   ourClients: any;
   services: any;
   someApps: any;
+  faq: any;
 }) => (
   <>
     <Hero content={props.hero} />
@@ -69,7 +49,7 @@ const Index = (props: {
     <OurClients content={props.ourClients} />
     <Services content={props.services} />
     <LogoGrid content={props.someApps} />
-    <AccordionTemp stories={stories} />
+    <AccordionTemp content={props.faq} />
     <AboutUs />
     <ContactFormFooter />
   </>

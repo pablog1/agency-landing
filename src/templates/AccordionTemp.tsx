@@ -6,14 +6,10 @@ import {
   AccordionBody,
 } from '@material-tailwind/react';
 import Image from 'next/image';
+import ReactMarkdown from 'react-markdown';
 
-/*
-let stories: {
-  title: string;
-  content: string;
-};
-*/
-const AccordionTemp = ({ stories }: any) => {
+const AccordionTemp = ({ content }: any) => {
+  const { question } = content;
   const [open, setOpen] = useState(0);
 
   const handleOpen = (value: SetStateAction<number>) => {
@@ -26,24 +22,33 @@ const AccordionTemp = ({ stories }: any) => {
           <div className="lg:w-2/5 lg:mr-20 relative">
             <Image
               className="object-center object-conver pointer-events-none"
-              src="/assets/images/box.jpg"
-              alt="FAQ"
+              src={`/${content.image}`}
+              alt={content.alt_text}
               width="800"
               height="600"
             />
           </div>
           <div className="w-full lg:w-3/5">
-            {stories.map((story: any, index: number) => {
+            {Object.keys(question).map((faq, index) => {
               return (
                 <Accordion open={open === index} key={index}>
                   <AccordionHeader
                     onClick={() => handleOpen(index)}
                     className="text-white hover:text-white text-left"
                   >
-                    {story.title}
+                    {question[faq].question}
                   </AccordionHeader>
                   <AccordionBody className="text-white">
-                    <p> {story.content}</p>
+                    <div className="text-white answers">
+                      <ReactMarkdown>{question[faq].answer}</ReactMarkdown>
+                      <style jsx>
+                        {`
+                          .answers {
+                            font-weight: 400;
+                          }
+                        `}
+                      </style>
+                    </div>
                   </AccordionBody>
                 </Accordion>
               );

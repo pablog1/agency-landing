@@ -28,7 +28,8 @@
     "remark-parse": "^10.0.1",
     "styled-jsx-plugin-postcss": "^4.0.1",
     "swiper": "^8.3.2",
-    "unified": "^10.1.2"
+    "unified": "^10.1.2",
+    "@tailwindcss/typography": "^0.5.7"
   },
   "devDependencies": {
     "@next/bundle-analyzer": "^12.0.9",
