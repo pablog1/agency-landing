@@ -53,4 +53,5 @@ collections:
                  - {label: "Alt text", name: "alt_text", widget: "string"}
                  - {label: "Heading", name: "heading", widget: "string"}
                  - {label: "Description", name: "description", widget: "markdown"}
-                 - {label: "Reverse", name: "reverse", widget: "boolean"}
+                 - {label: "CTA Text", name: "cta_text", widget: "string", default: "Contact Us"}
+                 - {label: "Reverse", name: "reverse", widget: "boolean", default: false}
