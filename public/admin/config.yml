@@ -70,3 +70,16 @@ collections:
               fields:
                  - {label: "Image", name: "image", widget: "image"}
                  - {label: "Alt text", name: "alt_text", widget: "string"}
+        - label: "Services"
+          name: "services"
+          widget: "object"
+          collapsed: true
+          fields:
+            - label: "Service"
+              name: "service"
+              widget: "list"
+              fields:
+                 - {label: "Image", name: "image", widget: "image"}
+                 - {label: "Alt text", name: "alt_text", widget: "string"}
+                 - {label: "Heading", name: "heading", widget: "string"}
+                 - {label: "Subheading", name: "subheading", widget: "string"}
