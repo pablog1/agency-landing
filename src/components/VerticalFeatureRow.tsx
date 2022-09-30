@@ -5,6 +5,7 @@ import ReactMarkdown from 'react-markdown';
 type IVerticalFeatureRowProps = {
   title: string;
   description: string;
+  cta_text: string;
   image: string;
   imageAlt: string;
   reverse?: boolean;
@@ -30,7 +31,7 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
         <p className="mt-6">
           <ReactMarkdown>{props.description}</ReactMarkdown>
         </p>
-        <div className="mt-6 font-bold">Contact Us</div>
+        <div className="mt-6 font-bold">{props.cta_text}</div>
       </div>
 
       <div className="w-full lg:w-1/2 pt-4 lg:p-6 relative pb-12">

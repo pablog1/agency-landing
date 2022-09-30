@@ -7,6 +7,7 @@ const ImageTextBlocks = ({ content }: any) => (
         key={i}
         title={`${content[keyName].heading}`}
         description={`${content[keyName].description}`}
+        cta_text={content[keyName].cta_text}
         image={`/${content[keyName].image}`}
         imageAlt={content[keyName].alt_text}
         reverse={content[keyName].reverse}
