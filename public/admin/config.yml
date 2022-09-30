@@ -17,6 +17,7 @@ collections:
           name: "hero"
           widget: "object"
           summary: '{{fields.heading}}'
+          collapsed: true
           fields:
             - {label: "Heading", name: "heading", widget: "string"}
             - {label: "Subheading", name: "subheading", widget: "string"}
@@ -27,4 +28,14 @@ collections:
               widget: "list"
               fields:
                  - {label: "Title", name: "title", widget: "string"}
-                 
+        - label: "Logos with Numbers"
+          name: "numbers"
+          widget: "object"
+          collapsed: true
+          fields:
+            - label: "Number"
+              name: "benefits"
+              widget: "list"
+              fields:
+                 - {label: "Number", name: "number", widget: "string"}
+                 - {label: "Image", name: "image", widget: "image"}
