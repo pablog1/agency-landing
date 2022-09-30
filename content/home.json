@@ -1,6 +1,81 @@
 {
-  "date": "2022-09-29T14:34:31.903Z",
   "body": "H﻿ola **mundo**\n\nE﻿sto es un texto hecho con markdown",
+  "someApps": {
+    "app": [
+      {
+        "image": "img/figma.svg",
+        "alt_text": "Figma"
+      },
+      {
+        "image": "img/reactjs.svg",
+        "alt_text": "React"
+      },
+      {
+        "image": "img/figma.svg",
+        "alt_text": "Figma"
+      },
+      {
+        "image": "img/reactjs.svg",
+        "alt_text": "React"
+      },
+      {
+        "image": "img/figma.svg",
+        "alt_text": "Figma"
+      },
+      {
+        "image": "img/reactjs.svg",
+        "alt_text": "React"
+      },
+      {
+        "image": "img/figma.svg",
+        "alt_text": "Figma"
+      },
+      {
+        "image": "img/reactjs.svg",
+        "alt_text": "React"
+      }
+    ]
+  },
+  "numbers": {
+    "numbers": [
+      {
+        "number": "20",
+        "image": "img/logo_shopify.png",
+        "name": "Shopify"
+      },
+      {
+        "number": "50",
+        "image": "img/logo_shopify_partners.png",
+        "name": "Shopify Partner"
+      },
+      {
+        "number": "85",
+        "image": "img/logo_shopify_plus.png",
+        "name": "Shopify plus"
+      }
+    ]
+  },
+  "date": "2022-09-29T14:34:31.903Z",
+  "images_text": {
+    "block": [
+      {
+        "image": "img/box.jpg",
+        "alt_text": "image alt",
+        "heading": "Stores Built from Scratch",
+        "description": "We’ll guide you on **your e-commerce** journey and get your online store up and running on the Shopify platform.\n\nT﻿est",
+        "reverse": false,
+        "cta_text": "Contact Us"
+      },
+      {
+        "image": "img/box.jpg",
+        "alt_text": "ffff",
+        "heading": "Custom Development",
+        "description": "We’ll guide you on your **e-commerce journey and get your** online store up and running on the Shopify platform.\n\nt﻿est",
+        "reverse": true,
+        "cta_text": "Contact Us"
+      }
+    ]
+  },
   "title": "Titulo!",
   "hero": {
     "birthdate": "09/14/2022",
@@ -32,45 +107,6 @@
       }
     ],
     "benefits_icon": "img/tick_icon.svg"
-  },
-  "numbers": {
-    "numbers": [
-      {
-        "number": "20",
-        "image": "img/logo_shopify.png",
-        "name": "Shopify"
-      },
-      {
-        "number": "50",
-        "image": "img/logo_shopify_partners.png",
-        "name": "Shopify Partner"
-      },
-      {
-        "number": "85",
-        "image": "img/logo_shopify_plus.png",
-        "name": "Shopify plus"
-      }
-    ]
-  },
-  "images_text": {
-    "block": [
-      {
-        "image": "img/box.jpg",
-        "alt_text": "image alt",
-        "heading": "Stores Built from Scratch",
-        "description": "We’ll guide you on **your e-commerce** journey and get your online store up and running on the Shopify platform.\n\nT﻿est",
-        "reverse": false,
-        "cta_text": "Contact Us"
-      },
-      {
-        "image": "img/box.jpg",
-        "alt_text": "ffff",
-        "heading": "Custom Development",
-        "description": "We’ll guide you on your **e-commerce journey and get your** online store up and running on the Shopify platform.\n\nt﻿est",
-        "reverse": true,
-        "cta_text": "Contact Us"
-      }
-    ]
   },
   "ourClients": {
     "heading": "Our clients",
