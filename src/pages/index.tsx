@@ -20,6 +20,7 @@ export const getStaticProps = async () => {
   const { services } = jsonFile;
   const { someApps } = jsonFile;
   const { faq } = jsonFile;
+  const { about } = jsonFile;
 
   return {
     props: {
@@ -30,17 +31,19 @@ export const getStaticProps = async () => {
       services,
       someApps,
       faq,
+      about,
     },
   };
 };
 const Index = (props: {
-  hero: any;
-  numbers: any;
+  hero: object;
+  numbers: object;
   images_text: any;
-  ourClients: any;
-  services: any;
-  someApps: any;
-  faq: any;
+  ourClients: object;
+  services: object;
+  someApps: object;
+  faq: object;
+  about: object;
 }) => (
   <>
     <Hero content={props.hero} />
@@ -50,7 +53,7 @@ const Index = (props: {
     <Services content={props.services} />
     <LogoGrid content={props.someApps} />
     <AccordionTemp content={props.faq} />
-    <AboutUs />
+    <AboutUs content={props.about} />
     <ContactFormFooter />
   </>
 );
