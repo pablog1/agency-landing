@@ -82,4 +82,15 @@ collections:
                  - {label: "Image", name: "image", widget: "image"}
                  - {label: "Alt text", name: "alt_text", widget: "string"}
                  - {label: "Heading", name: "heading", widget: "string"}
-                 - {label: "Subheading", name: "subheading", widget: "string"}
+                 - {label: "Subheading", name: "subheading", widget: "string"}        
+        - label: "Some Apps"
+          name: "someApps"
+          widget: "object"
+          collapsed: true
+          fields:
+            - label: "App"
+              name: "app"
+              widget: "list"
+              fields:
+                 - {label: "Image", name: "image", widget: "image"}
+                 - {label: "Alt text", name: "alt_text", widget: "string"}
