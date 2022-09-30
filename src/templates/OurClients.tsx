@@ -15,7 +15,8 @@ const isInViewport: any = (elem: any) => {
   return null;
 };
 
-const OurClients = () => {
+const OurClients = ({ content }: any) => {
+  const { clients } = content;
   const [offset, setOffset] = useState(0);
   useEffect(() => {
     const onScroll = () => setOffset(offset + window.pageYOffset);
@@ -40,91 +41,21 @@ const OurClients = () => {
   return (
     <section className="relative bg-primary-400 mt-16 pt-6 pb-12">
       <div className="c-container h2 text-center mt-6 mb-4 p-5 pb-8 !text-white">
-        Our Clients
+        {content.heading}
       </div>
       <div className="w-full relative text-black overflow-hidden whitespace-nowrap ">
         <ul className=" whitespace-nowrap w-full scroll-animation">
-          <li className="w-40 md:w-80 inline mx-4">
-            <Image
-              className="object-center object-cover pointer-events-none"
-              src="/assets/images/team_member.jpg"
-              alt="pp"
-              width="300"
-              height="300"
-            />
-          </li>
-          <li className="inline mx-4">
-            <Image
-              className="object-center object-cover pointer-events-none"
-              src="/assets/images/team_member.jpg"
-              alt="pp"
-              width="300"
-              height="300"
-            />
-          </li>
-          <li className="inline mx-4">
-            <Image
-              className="object-center object-cover pointer-events-none"
-              src="/assets/images/team_member.jpg"
-              alt="pp"
-              width="300"
-              height="300"
-            />
-          </li>
-          <li className="inline mx-4">
-            <Image
-              className="object-center object-cover pointer-events-none"
-              src="/assets/images/team_member.jpg"
-              alt="pp"
-              width="300"
-              height="300"
-            />
-          </li>
-          <li className="inline mx-4">
-            <Image
-              className="object-center object-cover pointer-events-none"
-              src="/assets/images/team_member.jpg"
-              alt="pp"
-              width="300"
-              height="300"
-            />
-          </li>
-          <li className="inline mx-4">
-            <Image
-              className="object-center object-cover pointer-events-none"
-              src="/assets/images/team_member.jpg"
-              alt="pp"
-              width="300"
-              height="300"
-            />
-          </li>
-          <li className="inline mx-4">
-            <Image
-              className="object-center object-cover pointer-events-none"
-              src="/assets/images/team_member.jpg"
-              alt="pp"
-              width="300"
-              height="300"
-            />
-          </li>
-          <li className="inline mx-4">
-            <Image
-              className="object-center object-cover pointer-events-none"
-              src="/assets/images/team_member.jpg"
-              alt="pp"
-              width="300"
-              height="300"
-            />
-          </li>
-          <li className="inline mx-4">
-            <Image
-              className="object-center object-cover pointer-events-none"
-              src="/assets/images/team_member.jpg"
-              alt="pp"
-              width="300"
-              height="300"
-            />
-          </li>
+          {Object.keys(clients).map((keyName, i) => (
+            <li key={i} className="w-40 md:w-80 inline mx-4">
+              <Image
+                className="object-center object-cover pointer-events-none"
+                src={`/${clients[keyName].image}`}
+                alt={clients[keyName].alt_text}
+                width="300"
+                height="300"
+              />
+            </li>
+          ))}
         </ul>
       </div>
     </section>

@@ -39,38 +39,33 @@ export const getStaticProps = async () => {
   const { numbers } = jsonFile;
   // eslint-disable-next-line
   const { images_text } = jsonFile;
+  const { ourClients } = jsonFile;
+
   return {
     props: {
       hero,
       numbers,
       images_text,
+      ourClients,
     },
   };
 };
-const Index = (props: { hero: any; numbers: any; images_text: any }) => (
+const Index = (props: {
+  hero: any;
+  numbers: any;
+  images_text: any;
+  ourClients: any;
+}) => (
   <>
     <Hero content={props.hero} />
     <Numbers content={props.numbers} />
     <ImageTextBlocks content={props.images_text.block} />
-    <OurClients />
+    <OurClients content={props.ourClients} />
     <Services />
     <LogoGrid />
     <AccordionTemp stories={stories} />
     <AboutUs />
     <ContactFormFooter />
-    {/*
-    <Benefits />
-    <VideoWithText />
-    <Carousel />
-    <Carouselx3 />
-    <BannerWithBK
-      title="Reach out now and Get a FREE Sample Website Design"
-      align="right" // left or right
-      tailwindColor="!text-primary-400" // needs !important
-      inlineContainer={true}
-    />
-    <Team team={team} />
-*/}
   </>
 );
 
