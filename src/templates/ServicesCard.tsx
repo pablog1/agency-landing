@@ -1,27 +1,20 @@
 import { ServiceCard } from '../components/serviceCard';
 
-const Services = () => {
+const Services = ({ content }: any) => {
+  const { service } = content;
   return (
     <section className="relative c-container">
       <div className="flex flex-col xl:flex-row justify-center items-center relative text-black mt-28">
-        <ServiceCard
-          title="Shopify PLUS Development"
-          subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam facilisi vulputate in."
-          src="/assets/images/logo_shopify_plus.png"
-          alt="Shopify Plus"
-        />
-        <ServiceCard
-          title="Monthly Website Support"
-          subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam facilisi vulputate in."
-          src="/assets/images/logo_shopify_partners.png"
-          alt="Shopify Partners"
-        />
-        <ServiceCard
-          title="Shopify Development"
-          subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam facilisi vulputate in."
-          src="/assets/images/logo_shopify.png"
-          alt="Shopify"
-        />
+        {Object.keys(service).map((keyName, i) => (
+          <li key={i} className="w-40 md:w-80 inline mx-4">
+            <ServiceCard
+              title={service[keyName].heading}
+              subtitle={service[keyName].subheading}
+              src={`/${service[keyName].image}`}
+              alt={service[keyName].alt_text}
+            />
+          </li>
+        ))}
       </div>
     </section>
   );

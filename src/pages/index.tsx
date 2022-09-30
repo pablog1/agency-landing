@@ -40,6 +40,7 @@ export const getStaticProps = async () => {
   // eslint-disable-next-line
   const { images_text } = jsonFile;
   const { ourClients } = jsonFile;
+  const { services } = jsonFile;
 
   return {
     props: {
@@ -47,6 +48,7 @@ export const getStaticProps = async () => {
       numbers,
       images_text,
       ourClients,
+      services,
     },
   };
 };
@@ -55,13 +57,14 @@ const Index = (props: {
   numbers: any;
   images_text: any;
   ourClients: any;
+  services: any;
 }) => (
   <>
     <Hero content={props.hero} />
     <Numbers content={props.numbers} />
     <ImageTextBlocks content={props.images_text.block} />
     <OurClients content={props.ourClients} />
-    <Services />
+    <Services content={props.services} />
     <LogoGrid />
     <AccordionTemp stories={stories} />
     <AboutUs />
