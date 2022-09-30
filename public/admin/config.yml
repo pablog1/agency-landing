@@ -102,8 +102,8 @@ collections:
             - {label: "Heading", name: "heading", widget: "string"}
             - {label: "Image", name: "image", widget: "image"}
             - {label: "Alt text", name: "alt_text", widget: "string"}
-            - label: "faq"
-              name: "faq"
+            - label: "question"
+              name: "question"
               widget: "list"
               fields:
                  - {label: "Question", name: "question", widget: "string"}
