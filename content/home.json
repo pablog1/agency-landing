@@ -34,16 +34,6 @@
     "benefits_icon": "img/tick_icon.svg"
   },
   "numbers": {
-    "benefits": [
-      {
-        "number": "20",
-        "image": "img/logo_shopify.png"
-      },
-      {
-        "number": "50",
-        "image": "img/logo_shopify_partners.png"
-      }
-    ],
     "numbers": [
       {
         "number": "20",

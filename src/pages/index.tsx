@@ -38,6 +38,8 @@ export const getStaticProps = async () => {
   const { hero } = jsonFile;
   const { numbers } = jsonFile;
 
+  console.log(numbers);
+
   return {
     props: {
       hero,
