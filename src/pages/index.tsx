@@ -37,19 +37,21 @@ export const getStaticProps = async () => {
   const jsonFile = JSON.parse(fs.readFileSync('content/home.json').toString());
   const { hero } = jsonFile;
   const { numbers } = jsonFile;
-
+  // eslint-disable-next-line
+  const { images_text } = jsonFile;
   return {
     props: {
       hero,
       numbers,
+      images_text,
     },
   };
 };
-const Index = (props: { hero: any; numbers: any }) => (
+const Index = (props: { hero: any; numbers: any; images_text: any }) => (
   <>
     <Hero content={props.hero} />
     <Numbers content={props.numbers} />
-    <ImageTextBlocks />
+    <ImageTextBlocks content={props.images_text.block} />
     <OurClients />
     <Services />
     <LogoGrid />

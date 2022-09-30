@@ -1,5 +1,6 @@
 import className from 'classnames';
 import Image from 'next/image';
+import ReactMarkdown from 'react-markdown';
 
 type IVerticalFeatureRowProps = {
   title: string;
@@ -18,7 +19,7 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
     'items-center',
     'text-black',
     {
-      'lg:flex-row-reverse': props.reverse,
+      'lg:flex-row-reverse': !props.reverse,
     }
   );
 
@@ -26,7 +27,9 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
     <div className={verticalFeatureClass}>
       <div className="w-full lg:w-1/2 lg:px-6">
         <h3 className="h3">{props.title}</h3>
-        <p className="mt-6">{props.description}</p>
+        <p className="mt-6">
+          <ReactMarkdown>{props.description}</ReactMarkdown>
+        </p>
         <div className="mt-6 font-bold">Contact Us</div>
       </div>
 

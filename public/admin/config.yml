@@ -48,6 +48,7 @@ collections:
             - label: "Block"
               name: "block"
               widget: "list"
+              summary: '{{fields.heading}}'
               fields:
                  - {label: "Image", name: "image", widget: "image"}
                  - {label: "Alt text", name: "alt_text", widget: "string"}
