@@ -4,6 +4,16 @@ backend:
 media_folder: public/img
 public_folder: img
 collections:
+  - name: "settings"
+    label: "Settings"
+    files:
+    - label: "Settings"
+      name: "settings"
+      file: "content/settings.json"
+      format: "json"
+      fields:
+        - {label: "Site name", name: "siteName", widget: "string"}
+        - {label: "Logo", name: "logo", widget: "image"}
   - name: "pages"
     label: "Pages"
     files:
