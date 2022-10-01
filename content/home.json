@@ -117,16 +117,30 @@
   },
   "title": "Titulo!",
   "hero": {
-    "birthdate": "09/14/2022",
+    "partnerLogos": [
+      {
+        "logo": "img/logo_shopify.png"
+      },
+      {
+        "logo": "img/logo_shopify_partners.png"
+      },
+      {
+        "logo": "img/logo_shopify_plus.png"
+      }
+    ],
     "heading": "We build slick e-commerce stores that look great and perform even better",
     "subheading": "That's the Subheading",
+    "background_image": "img/aece-banner.jpg",
     "name": "aaaa",
+    "mobileBackgroundImage": "img/christin-hume-hcfwew744z4-unsplash.jpg",
+    "backgroundImage": "img/aece-banner.jpg",
+    "birthdate": "09/14/2022",
     "address": {
       "street": "asadf",
       "city": "sdf",
       "post-code": "333"
     },
-    "background_image": "img/aece-banner.jpg",
+    "benefits_icon": "img/tick_icon.svg",
     "benefits": [
       {
         "icon": "img/tick_icon.svg",
@@ -144,8 +158,7 @@
         "icon": "img/tick_icon.svg",
         "title": "Optimal ongoing support"
       }
-    ],
-    "benefits_icon": "img/tick_icon.svg"
+    ]
   },
   "ourClients": {
     "heading": "Our clients",
