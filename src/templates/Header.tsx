@@ -46,7 +46,7 @@ const Header = (props: HeaderProps) => {
             break;
 
           default:
-            console.log(`Sorry, we are out of ${value}.`);
+            setHeaderBackground('#ffffff20');
         }
       }
     };
@@ -92,7 +92,7 @@ const Header = (props: HeaderProps) => {
       <section className="">
         <div className="bg-black text-white relative z-30">
           <div className="c-container text-center z-20 ">
-            Shopify Custom development
+            Shopify Custom Development
           </div>
         </div>
         <div
@@ -109,6 +109,7 @@ const Header = (props: HeaderProps) => {
               .header-padding-big {
                 padding: 2rem 0 1rem;
                 transition: 300ms ease;
+                background-color: #ffffff90;
               }
               .header-padding-small {
                 padding: 0;

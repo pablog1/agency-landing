@@ -31,7 +31,7 @@ const Sidebar = (props: INavbarProps) => {
       <nav
         className={`${
           offset > 0 ? `header-small` : `header-big`
-        }  c-container bg-[#ffffff80] w-full fixed z-30 flex md:hidden mobile`}
+        }  c-container bg-[#ffffff80] w-full fixed z-30 pb-1 flex md:hidden mobile`}
       >
         <button
           id="nav-icon"
@@ -43,13 +43,13 @@ const Sidebar = (props: INavbarProps) => {
           <span></span>
         </button>
 
-        <div className="logo relative w-[172px] h-[62px]">
+        <div className="logo relative w-[140px] h-[50px]">
           <Image
             src={`/${props.logo}`}
             objectFit="fill"
             layout="fill"
             alt="Logo"
-            className=""
+            className="brightness-0"
           />
         </div>
       </nav>
@@ -93,10 +93,10 @@ const Sidebar = (props: INavbarProps) => {
           #nav-icon span {
             display: block;
             position: absolute;
-            height: 6px;
+            height: 4px;
             width: 100%;
             background: #000;
-            border-radius: 6px;
+            border-radius: 4px;
             opacity: 1;
             left: 0;
             -webkit-transform: rotate(0deg);
