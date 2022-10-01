@@ -26,7 +26,6 @@ const Header = (props: HeaderProps) => {
   useEffect(() => {
     const onScroll = () => {
       setOffset(window.pageYOffset);
-
       // random background color
       if (Math.abs(offsetColors - offset) > 400) {
         setOffsetColors(window.pageYOffset);
@@ -34,16 +33,16 @@ const Header = (props: HeaderProps) => {
 
         switch (value) {
           case 1:
-            setHeaderBackground('#0000ffe0');
+            setHeaderBackground('#d9d9fdf0');
             break;
           case 2:
-            setHeaderBackground('#00ff43e0');
+            setHeaderBackground('#f4d9fdf0');
             break;
           case 3:
-            setHeaderBackground('#ffe000e0');
+            setHeaderBackground('#d9fdf3f0');
             break;
           case 4:
-            setHeaderBackground('#ff00c89c');
+            setHeaderBackground('#fdead9f0');
             break;
 
           default:
@@ -92,7 +91,9 @@ const Header = (props: HeaderProps) => {
       </Sidebar>
       <section className="">
         <div className="bg-black text-white relative z-30">
-          <div className="c-container text-center z-20 ">TopBar </div>
+          <div className="c-container text-center z-20 ">
+            Shopify Custom development
+          </div>
         </div>
         <div
           className={classNames(
@@ -110,7 +111,7 @@ const Header = (props: HeaderProps) => {
                 transition: 300ms ease;
               }
               .header-padding-small {
-                padding: 0.3rem 0;
+                padding: 0;
                 transition: 300ms ease;
                 background-color: ${headerBackground};
                 transition: background-color 1s ease;
@@ -119,6 +120,7 @@ const Header = (props: HeaderProps) => {
           </style>
           <div className="c-container">
             <NavbarTwoColumns
+              offset={offset}
               logo={
                 <Logo
                   xl

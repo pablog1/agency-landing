@@ -14,7 +14,7 @@ const Hero = ({ content }: any) => {
         />
       </div>
 
-      <div className="c-container mx-auto flex flex-col lg:flex-row items-center justify-between relative">
+      <div className="c-container mx-auto flex flex-col lg:flex-row items-center justify-between relative pb-8">
         <div className="lg:w-2/5  lg:mr-8 rounded-md bg-opacityColor-100 p-8">
           <div className="h1 mb-8 ">{content.heading}</div>
           <ul className="font-bold">
@@ -28,7 +28,7 @@ const Hero = ({ content }: any) => {
             li {
               background: url(/${content.benefits_icon}) no-repeat left top;
               padding-left: 30px;
-              margin-bottom: 10px;
+              margin-bottom: 30px;
             }
           `}
         </style>

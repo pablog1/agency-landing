@@ -41,7 +41,7 @@ const ContactForm = (props: ContactFormProps) => (
     <style jsx>
       {`
         .formField {
-          @apply text-black bg-transparent border-b-2 placeholder-gray-500 focus:outline-none;
+          @apply text-black bg-transparent border-gray-700 border-b-2 placeholder-gray-700 focus:outline-none;
         }
       `}
     </style>

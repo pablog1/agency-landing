@@ -74,19 +74,27 @@
   "images_text": {
     "block": [
       {
-        "image": "img/box.jpg",
-        "alt_text": "image alt",
+        "image": "img/House_plan.png",
+        "alt_text": "Building from scratch",
         "heading": "Stores Built from Scratch",
-        "description": "We’ll guide you on **your e-commerce** journey and get your online store up and running on the Shopify platform.\n\nT﻿est",
+        "description": "We’ll guide you on your e-commerce journey and get your online store up and running on the Shopify platform.",
         "reverse": false,
         "cta_text": "Contact Us"
       },
       {
-        "image": "img/box.jpg",
-        "alt_text": "ffff",
+        "image": "img/custom_development.png",
+        "alt_text": "Custom development",
         "heading": "Custom Development",
-        "description": "We’ll guide you on your **e-commerce journey and get your** online store up and running on the Shopify platform.\n\nt﻿est",
+        "description": "Starting from 0 or already running a store but need to take that extra step? \n\nFrom design changes to migrations and integrations, we can help your business.",
         "reverse": true,
+        "cta_text": "Contact Us"
+      },
+      {
+        "image": "img/optimization.jpg",
+        "alt_text": "E-commerce Optimization",
+        "heading": "E-commerce Optimization",
+        "description": "Drawing on our deep expertise in e-commerce and online marketing, we’ll review your conversion path and recommend changes to boost sales.",
+        "reverse": false,
         "cta_text": "Contact Us"
       }
     ]
@@ -141,19 +149,15 @@
     "benefits": [
       {
         "icon": "img/tick_icon.svg",
-        "title": "Always amazing"
+        "title": "Custom Shopify & Shopify Plus development."
       },
       {
         "icon": "img/tick_icon.svg",
-        "title": "Marketing setup included"
+        "title": "Fixes, optimizations, migrations and integrations with other platforms."
       },
       {
         "icon": "img/tick_icon.svg",
-        "title": "Ecommerce report included"
-      },
-      {
-        "icon": "img/tick_icon.svg",
-        "title": "Optimal ongoing support"
+        "title": "Built from scratch, with amazing design and optimized for marketing."
       }
     ]
   },

@@ -43,7 +43,7 @@ const Sidebar = (props: INavbarProps) => {
           <span></span>
         </button>
 
-        <div className="logo relative w-[80px] h-[54px]">
+        <div className="logo relative w-[172px] h-[62px]">
           <Image
             src={`/${props.logo}`}
             objectFit="fill"

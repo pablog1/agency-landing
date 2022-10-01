@@ -11,8 +11,9 @@ const Logo = (props: LogoProps) => (
       className="object-center object-contain pointer-events-none"
       src={props.src}
       alt={props.alt}
-      width="400"
-      height="200"
+      objectFit="contain"
+      width="207"
+      height="75"
     />
   </div>
 );
