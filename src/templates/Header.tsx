@@ -134,7 +134,7 @@ const Header = (props: HeaderProps) => {
             >
               <li className="z-10">
                 <Link href="/newpage">
-                  <a>New page</a>
+                  <a>New page - {headerBackground};</a>
                 </Link>
               </li>
               <li className="z-10">
