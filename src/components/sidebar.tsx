@@ -32,6 +32,7 @@ const Sidebar = (props: INavbarProps) => {
         className={`${
           offset > 0 ? `header-small` : `header-big`
         }  c-container bg-[#ffffff80] w-full fixed z-30 pb-1 flex md:hidden mobile`}
+        style={{ backgroundColor: props.backgroundColor }}
       >
         <button
           id="nav-icon"
@@ -75,8 +76,8 @@ const Sidebar = (props: INavbarProps) => {
       <style jsx>
         {`
           #nav-icon {
-            width: 40px;
-            height: 30px;
+            width: 33px;
+            height: 15px;
             position: relative;
             margin: 10px 10px 0 0;
             -webkit-transform: rotate(0deg);
@@ -93,10 +94,10 @@ const Sidebar = (props: INavbarProps) => {
           #nav-icon span {
             display: block;
             position: absolute;
-            height: 4px;
+            height: 2px;
             width: 100%;
             background: #000;
-            border-radius: 4px;
+            border-radius: 3px;
             opacity: 1;
             left: 0;
             -webkit-transform: rotate(0deg);
@@ -118,7 +119,7 @@ const Sidebar = (props: INavbarProps) => {
           }
 
           #nav-icon span:nth-child(2) {
-            top: 12px;
+            top: 10px;
             -webkit-transform-origin: left center;
             -moz-transform-origin: left center;
             -o-transform-origin: left center;
@@ -126,7 +127,7 @@ const Sidebar = (props: INavbarProps) => {
           }
 
           #nav-icon span:nth-child(3) {
-            top: 24px;
+            top: 20px;
             -webkit-transform-origin: left center;
             -moz-transform-origin: left center;
             -o-transform-origin: left center;
@@ -152,7 +153,7 @@ const Sidebar = (props: INavbarProps) => {
             -moz-transform: rotate(-45deg);
             -o-transform: rotate(-45deg);
             transform: rotate(-45deg);
-            top: 24px;
+            top: 20px;
             left: 8px;
           }
 
@@ -163,7 +164,6 @@ const Sidebar = (props: INavbarProps) => {
           .header-small {
             padding-top: 0.5rem;
             transition: 150ms ease;
-            background-color: ${props.backgroundColor};
             transition: background-color 1s ease;
           }
 

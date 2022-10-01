@@ -53,6 +53,9 @@ module.exports = withMT({
       lineHeight: {
         hero: '4.5rem',
       },
+      fontFamily: {
+        montserrat: ['Montserrat', 'sans-serif'],
+      },
     },
   },
   variants: {},

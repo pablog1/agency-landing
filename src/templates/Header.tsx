@@ -17,7 +17,7 @@ type HeaderProps = {
 const Header = (props: HeaderProps) => {
   const [offset, setOffset] = useState(0);
   const [offsetColors, setOffsetColors] = useState(0);
-  const [headerBackground, setHeaderBackground] = useState('#ffffff20');
+  const [headerBackground, setHeaderBackground] = useState('#ffffff90');
 
   function generateRandomIntegerInRange(min: number, max: number) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -45,7 +45,7 @@ const Header = (props: HeaderProps) => {
             break;
 
           default:
-            setHeaderBackground('#ffffff20');
+            setHeaderBackground('#fff');
         }
       }
     };
@@ -98,8 +98,8 @@ const Header = (props: HeaderProps) => {
           className={classNames(
             'transition duration-300  w-full bg-[#ffffff80] hidden md:block fixed top-0 z-10',
             {
-              'header-padding-small': offset > 0,
-              'header-padding-big': offset === 0,
+              'header-padding-small': offset > 2,
+              'header-padding-big': offset <= 2,
             }
           )}
           style={{ backgroundColor: headerBackground }}
@@ -131,19 +131,19 @@ const Header = (props: HeaderProps) => {
                 />
               }
             >
-              <li className="z-10">
+              <li className="z-10 hover:bg-red-500 hover:text-white duration-1000 p-1 rounded-md">
                 <Link href="/newpage">
-                  <a>New page - {headerBackground};</a>
+                  <a>Home</a>
                 </Link>
               </li>
-              <li className="z-10">
+              <li className="z-10 hover:bg-orange-500 hover:text-white duration-1000 p-1 rounded-md">
                 <Link href="https://github.com/ixartz/Next-JS-Landing-Page-Starter-Template">
-                  <a>GitHub</a>
+                  <a>About</a>
                 </Link>
               </li>
-              <li className="z-10">
+              <li className="z-10 hover:bg-green-500 hover:text-white duration-1000 p-1 rounded-md">
                 <Link href="/">
-                  <a>Sign in</a>
+                  <a>Contact</a>
                 </Link>
               </li>
             </NavbarTwoColumns>
