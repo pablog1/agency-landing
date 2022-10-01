@@ -31,13 +31,19 @@ collections:
           fields:
             - {label: "Heading", name: "heading", widget: "string"}
             - {label: "Subheading", name: "subheading", widget: "string"}
-            - {label: "Background Image", name: "background_image", widget: "image"}
+            - {label: "Desktop bakground Image", name: "backgroundImage", widget: "image"}
+            - {label: "Mobile bakground Image", name: "mobileBackgroundImage", widget: "image"}
             - {label: "Benefits icon", name: "benefits_icon", widget: "image"}
             - label: "Benefits"
               name: "benefits"
               widget: "list"
               fields:
                  - {label: "Title", name: "title", widget: "string"}
+            - label: "Partner Logos"
+              name: "partnerLogos"
+              widget: "list"
+              fields:
+                 - {label: "Logo", name: "logo", widget: "image"}
         - label: "Logos with Numbers"
           name: "numbers"
           widget: "object"
