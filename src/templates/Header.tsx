@@ -22,6 +22,7 @@ const Header = (props: HeaderProps) => {
   function generateRandomIntegerInRange(min: number, max: number) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
+  const headerBackgroundJsx = '#ffffff90';
 
   useEffect(() => {
     const onScroll = () => {
@@ -114,7 +115,7 @@ const Header = (props: HeaderProps) => {
               .header-padding-small {
                 padding: 0;
                 transition: 300ms ease;
-                background-color: ${headerBackground};
+                background-color: ${headerBackgroundJsx};
                 transition: background-color 1s ease;
               }
             `}
