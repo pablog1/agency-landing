@@ -29,7 +29,7 @@ const Header = (props: HeaderProps) => {
     <>
       <Meta title={AppConfig.title} description={AppConfig.description} />
 
-      <Sidebar>
+      <Sidebar logo={props.logo} siteName={props.siteName}>
         <li>
           <Link href="/">
             <a>Home</a>

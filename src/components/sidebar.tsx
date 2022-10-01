@@ -1,9 +1,12 @@
 import { useState, ReactNode, useEffect } from 'react';
 
 import classNames from 'classnames';
+import Image from 'next/image';
 
 type INavbarProps = {
   children: ReactNode;
+  logo: string;
+  siteName: string;
 };
 const Sidebar = (props: INavbarProps) => {
   const [showSidebar, setShowSidebar] = useState(false);
@@ -16,32 +19,39 @@ const Sidebar = (props: INavbarProps) => {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
+  const [isActive, setActive] = useState(false);
+  const toggleClass = () => {
+    setActive(!isActive);
+    setShowSidebar(!showSidebar);
+  };
+
   return (
     <>
-      {showSidebar ? (
+      <nav
+        className={`${
+          offset > 0 ? `header-small` : `header-big`
+        }  c-container bg-white w-full fixed z-30 flex md:hidden mobile`}
+      >
         <button
-          className={`${
-            offset > 0 ? `header-small-x` : `header-big-x`
-          } flex text-5xl  text-primary-400 items-center cursor-pointer fixed left-[23px] z-50 `}
-          onClick={() => setShowSidebar(!showSidebar)}
+          id="nav-icon"
+          className={isActive ? 'open' : ''}
+          onClick={toggleClass}
         >
-          x
+          <span></span>
+          <span></span>
+          <span></span>
         </button>
-      ) : (
-        <svg
-          onClick={() => setShowSidebar(!showSidebar)}
-          className={`${
-            offset > 0 ? `header-small` : `header-big`
-          } fill-primary-400 md:hidden fixed z-30 flex items-center cursor-pointer left-4 top-14`}
-          viewBox="0 0 100 80"
-          width="40"
-          height="40"
-        >
-          <rect width="100" height="10"></rect>
-          <rect y="30" width="100" height="10"></rect>
-          <rect y="60" width="100" height="10"></rect>
-        </svg>
-      )}
+
+        <div className="logo relative w-[80px] h-[54px]">
+          <Image
+            src={`/${props.logo}`}
+            objectFit="fill"
+            layout="fill"
+            alt="Logo"
+            className=""
+          />
+        </div>
+      </nav>
 
       <div
         className={classNames(
@@ -63,28 +73,103 @@ const Sidebar = (props: INavbarProps) => {
       </div>
       <style jsx>
         {`
+          #nav-icon {
+            width: 40px;
+            height: 30px;
+            position: relative;
+            margin: 10px 10px 0 0;
+            -webkit-transform: rotate(0deg);
+            -moz-transform: rotate(0deg);
+            -o-transform: rotate(0deg);
+            transform: rotate(0deg);
+            -webkit-transition: 0.5s ease-in-out;
+            -moz-transition: 0.5s ease-in-out;
+            -o-transition: 0.5s ease-in-out;
+            transition: 0.5s ease-in-out;
+            cursor: pointer;
+          }
+
+          #nav-icon span {
+            display: block;
+            position: absolute;
+            height: 6px;
+            width: 100%;
+            background: #000;
+            border-radius: 6px;
+            opacity: 1;
+            left: 0;
+            -webkit-transform: rotate(0deg);
+            -moz-transform: rotate(0deg);
+            -o-transform: rotate(0deg);
+            transform: rotate(0deg);
+            -webkit-transition: 0.25s ease-in-out;
+            -moz-transition: 0.25s ease-in-out;
+            -o-transition: 0.25s ease-in-out;
+            transition: 0.25s ease-in-out;
+          }
+
+          #nav-icon span:nth-child(1) {
+            top: 0px;
+            -webkit-transform-origin: left center;
+            -moz-transform-origin: left center;
+            -o-transform-origin: left center;
+            transform-origin: left center;
+          }
+
+          #nav-icon span:nth-child(2) {
+            top: 12px;
+            -webkit-transform-origin: left center;
+            -moz-transform-origin: left center;
+            -o-transform-origin: left center;
+            transform-origin: left center;
+          }
+
+          #nav-icon span:nth-child(3) {
+            top: 24px;
+            -webkit-transform-origin: left center;
+            -moz-transform-origin: left center;
+            -o-transform-origin: left center;
+            transform-origin: left center;
+          }
+
+          #nav-icon.open span:nth-child(1) {
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+            top: -3px;
+            left: 8px;
+          }
+
+          #nav-icon.open span:nth-child(2) {
+            width: 0%;
+            opacity: 0;
+          }
+
+          #nav-icon.open span:nth-child(3) {
+            -webkit-transform: rotate(-45deg);
+            -moz-transform: rotate(-45deg);
+            -o-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+            top: 24px;
+            left: 8px;
+          }
+
           .header-big {
-            top: 2.8rem;
+            padding-top: 0.8rem;
             transition: 150ms ease;
           }
           .header-small {
-            top: 0.5rem;
+            padding-top: 0.5rem;
             transition: 150ms ease;
           }
-          .header-big-x {
-            top: 1.7rem;
-            transition: 150ms ease;
-          }
-          .header-small-x {
-            top: -0.7rem;
-            transition: 150ms ease;
-          }
+
           .header-big-menu {
-            top: 6.8rem;
+            top: 4.2rem;
             transition: 150ms ease;
           }
           .header-small-menu {
-            top: 3.8rem;
+            top: 3.9rem;
             transition: 150ms ease;
           }
           ul {
