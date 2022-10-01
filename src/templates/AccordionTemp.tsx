@@ -41,6 +41,7 @@ const AccordionTemp = ({ content }: any) => {
                   <AccordionBody className="text-white">
                     <div className="text-white answers">
                       <ReactMarkdown>{question[faq].answer}</ReactMarkdown>
+
                       <style jsx>
                         {`
                           .answers {
