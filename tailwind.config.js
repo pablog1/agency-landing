@@ -34,6 +34,10 @@ module.exports = withMT({
         secondary: {
           100: '#014c6e',
         },
+        opacityColor: {
+          100: '#f9f9f9cc',
+          200: '#ebffeceb',
+        },
         gray: {
           100: '#f7fafc',
           200: '#edf2f7',

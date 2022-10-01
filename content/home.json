@@ -1,5 +1,4 @@
 {
-  "body": "H﻿ola **mundo**\n\nE﻿sto es un texto hecho con markdown",
   "someApps": {
     "app": [
       {
@@ -115,7 +114,6 @@
       }
     ]
   },
-  "title": "Titulo!",
   "hero": {
     "partnerLogos": [
       {
@@ -130,10 +128,9 @@
     ],
     "heading": "We build slick e-commerce stores that look great and perform even better",
     "subheading": "That's the Subheading",
-    "background_image": "img/aece-banner.jpg",
     "name": "aaaa",
     "mobileBackgroundImage": "img/christin-hume-hcfwew744z4-unsplash.jpg",
-    "backgroundImage": "img/aece-banner.jpg",
+    "backgroundImage": "img/online_seller.jpg",
     "birthdate": "09/14/2022",
     "address": {
       "street": "asadf",

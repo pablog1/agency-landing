@@ -7,6 +7,7 @@ type INavbarProps = {
   children: ReactNode;
   logo: string;
   siteName: string;
+  backgroundColor: string;
 };
 const Sidebar = (props: INavbarProps) => {
   const [showSidebar, setShowSidebar] = useState(false);
@@ -30,7 +31,7 @@ const Sidebar = (props: INavbarProps) => {
       <nav
         className={`${
           offset > 0 ? `header-small` : `header-big`
-        }  c-container bg-white w-full fixed z-30 flex md:hidden mobile`}
+        }  c-container bg-[#ffffff80] w-full fixed z-30 flex md:hidden mobile`}
       >
         <button
           id="nav-icon"
@@ -156,16 +157,21 @@ const Sidebar = (props: INavbarProps) => {
           }
 
           .header-big {
-            padding-top: 0.8rem;
+            padding-top: 1.8rem;
             transition: 150ms ease;
           }
           .header-small {
             padding-top: 0.5rem;
             transition: 150ms ease;
+            background-color: ${props.backgroundColor};
+            transition: background-color 1s ease;
+          }
+
+          nav {
           }
 
           .header-big-menu {
-            top: 4.2rem;
+            top: 5.2rem;
             transition: 150ms ease;
           }
           .header-small-menu {

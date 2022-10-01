@@ -8,7 +8,7 @@ type ContactFormProps = {
 
 const ContactForm = (props: ContactFormProps) => (
   <form
-    className={`${props.width} text-center flex flex-col p-8 my-8 bg-white rounded-md text-black `}
+    className={`${props.width} text-center flex flex-col p-8 my-8 bg-opacityColor-100 rounded-md text-black `}
   >
     <div className="h2 pb-8">
       <span className="text-black">{props.firstTitle}</span> {props.secondTitle}

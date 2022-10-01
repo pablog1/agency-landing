@@ -8,7 +8,6 @@ import { Header } from '../templates/Header';
 import { Hero } from '../templates/Hero';
 import { ImageTextBlocks } from '../templates/ImageTextBlocks';
 import { LogoGrid } from '../templates/LogoGrid';
-import { Numbers } from '../templates/Numbers';
 import { OurClients } from '../templates/OurClients';
 import { Services } from '../templates/ServicesCard';
 
@@ -63,7 +62,7 @@ const Index = (props: {
   <>
     <Header logo={props.logo} siteName={props.siteName} />
     <Hero content={props.hero} />
-    <Numbers content={props.numbers} />
+    {/* <Numbers content={props.numbers} /> */}
     <ImageTextBlocks content={props.images_text.block} />
     <OurClients content={props.ourClients} />
     <Services content={props.services} />
