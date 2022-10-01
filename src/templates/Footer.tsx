@@ -4,10 +4,22 @@ import { Background } from '../background/Background';
 import { CenteredFooter } from '../footer/CenteredFooter';
 import { Logo } from './Logo';
 
-const Footer = () => (
+type FooterProps = {
+  logo: string;
+  siteName: string;
+};
+
+const Footer = (props: FooterProps) => (
   <Background color="bg-primary-400 text-white py-4">
     <CenteredFooter
-      logo={<Logo textColor="text-white" iconColor="text-white" />}
+      logo={
+        <Logo
+          textColor="text-white"
+          iconColor="text-white"
+          logo={props.logo}
+          siteName={props.siteName}
+        />
+      }
       iconList={
         <>
           <Link href="/">

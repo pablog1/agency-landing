@@ -3,6 +3,8 @@ import fs from 'fs';
 import { AboutUs } from '../templates/AboutUs';
 import { AccordionTemp } from '../templates/AccordionTemp';
 import { ContactFormFooter } from '../templates/ContactFormFooter';
+import { Footer } from '../templates/Footer';
+import { Header } from '../templates/Header';
 import { Hero } from '../templates/Hero';
 import { ImageTextBlocks } from '../templates/ImageTextBlocks';
 import { LogoGrid } from '../templates/LogoGrid';
@@ -11,19 +13,29 @@ import { OurClients } from '../templates/OurClients';
 import { Services } from '../templates/ServicesCard';
 
 export const getStaticProps = async () => {
-  const jsonFile = JSON.parse(fs.readFileSync('content/home.json').toString());
-  const { hero } = jsonFile;
-  const { numbers } = jsonFile;
-  // eslint-disable-next-line
-  const { images_text } = jsonFile;
-  const { ourClients } = jsonFile;
-  const { services } = jsonFile;
-  const { someApps } = jsonFile;
-  const { faq } = jsonFile;
-  const { about } = jsonFile;
+  const settingsJsonFile = JSON.parse(
+    fs.readFileSync('content/settings.json').toString()
+  );
 
+  const homeJsonFile = JSON.parse(
+    fs.readFileSync('content/home.json').toString()
+  );
+
+  const { hero } = homeJsonFile;
+  const { numbers } = homeJsonFile;
+  // eslint-disable-next-line
+  const { images_text } = homeJsonFile;
+  const { ourClients } = homeJsonFile;
+  const { services } = homeJsonFile;
+  const { someApps } = homeJsonFile;
+  const { faq } = homeJsonFile;
+  const { about } = homeJsonFile;
+
+  const { logo, siteName } = settingsJsonFile;
   return {
     props: {
+      logo,
+      siteName,
       hero,
       numbers,
       images_text,
@@ -35,7 +47,10 @@ export const getStaticProps = async () => {
     },
   };
 };
+
 const Index = (props: {
+  logo: string;
+  siteName: string;
   hero: object;
   numbers: object;
   images_text: any;
@@ -46,6 +61,7 @@ const Index = (props: {
   about: object;
 }) => (
   <>
+    <Header logo={props.logo} siteName={props.siteName} />
     <Hero content={props.hero} />
     <Numbers content={props.numbers} />
     <ImageTextBlocks content={props.images_text.block} />
@@ -55,6 +71,7 @@ const Index = (props: {
     <AccordionTemp content={props.faq} />
     <AboutUs content={props.about} />
     <ContactFormFooter />
+    <Footer logo={props.logo} siteName={props.siteName} />
   </>
 );
 

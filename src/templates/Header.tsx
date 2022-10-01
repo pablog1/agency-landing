@@ -10,7 +10,12 @@ import { NavbarTwoColumns } from '../navigation/NavbarTwoColumns';
 import { AppConfig } from '../utils/AppConfig';
 import { Logo } from './Logo';
 
-const Header = () => {
+type HeaderProps = {
+  logo: string;
+  siteName: string;
+};
+
+const Header = (props: HeaderProps) => {
   const [offset, setOffset] = useState(0);
   useEffect(() => {
     const onScroll = () => setOffset(window.pageYOffset);
@@ -83,7 +88,15 @@ const Header = () => {
 
         <div className="c-container">
           <NavbarTwoColumns
-            logo={<Logo xl textColor="text-black" iconColor="text-black" />}
+            logo={
+              <Logo
+                xl
+                textColor="text-black"
+                iconColor="text-black"
+                logo={props.logo}
+                siteName={props.siteName}
+              />
+            }
           >
             <li className="z-10">
               <Link href="/newpage">
