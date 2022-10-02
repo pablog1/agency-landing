@@ -17,18 +17,18 @@ const AccordionTemp = ({ content }: any) => {
   };
   return (
     <>
-      <section className="c-container mt-12 py-8 bg-primary-500">
+      <section className="c-container !pl-0 !pr-0 lg:pr-4  mt-12  bg-primary-500">
         <div className="mx-auto flex flex-col lg:flex-row">
-          <div className="lg:w-2/5 lg:mr-20 relative">
+          <div className="w-full lg:w-2/5 lg:mr-20 min-h-[400px] relative">
             <Image
               className="object-center object-conver pointer-events-none"
               src={`/${content.image}`}
               alt={content.alt_text}
-              width="800"
-              height="600"
+              layout="fill"
+              objectFit="cover"
             />
           </div>
-          <div className="w-full lg:w-3/5">
+          <div className="w-full lg:w-3/5 py-4 px-4 lg:pl-2 lg:pr-12 lgx2:pl-4 lgx2:pr-28 ">
             {Object.keys(question).map((faq, index) => {
               return (
                 <Accordion open={open === index} key={index}>

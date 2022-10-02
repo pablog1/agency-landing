@@ -41,7 +41,7 @@ const Hero = ({ content }: any) => {
       <div className="bg-opacityColor-200 relative">
         <ul className="c-container flex justify-between ">
           {Object.keys(partnerLogos).map((keyName, i) => (
-            <li key={i} className="flex w-32 h-24 relative ">
+            <li key={i} className="flex w-32 h-24 relative mx-2 md:mx-0">
               <Image
                 src={`/${partnerLogos[keyName].logo}`}
                 objectFit="contain"
