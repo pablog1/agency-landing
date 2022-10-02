@@ -30,11 +30,12 @@ export const getStaticProps = async () => {
   const { faq } = homeJsonFile;
   const { about } = homeJsonFile;
 
-  const { logo, siteName } = settingsJsonFile;
+  const { logo, siteName, topBar } = settingsJsonFile;
   return {
     props: {
       logo,
       siteName,
+      topBar,
       hero,
       numbers,
       images_text,
@@ -50,6 +51,7 @@ export const getStaticProps = async () => {
 const Index = (props: {
   logo: string;
   siteName: string;
+  topBar: string;
   hero: object;
   numbers: object;
   images_text: any;
@@ -60,7 +62,7 @@ const Index = (props: {
   about: object;
 }) => (
   <>
-    <Header logo={props.logo} siteName={props.siteName} />
+    <Header logo={props.logo} siteName={props.siteName} topBar={props.topBar} />
     <Hero content={props.hero} />
     {/* <Numbers content={props.numbers} /> */}
     <ImageTextBlocks content={props.images_text.block} />

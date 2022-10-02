@@ -12,6 +12,7 @@ import { Logo } from './Logo';
 type HeaderProps = {
   logo: string;
   siteName: string;
+  topBar: string;
 };
 
 const Header = (props: HeaderProps) => {
@@ -85,9 +86,7 @@ const Header = (props: HeaderProps) => {
       </Sidebar>
       <section className="">
         <div className="bg-black text-white relative z-30">
-          <div className="c-container text-center z-20 ">
-            Shopify Custom Development
-          </div>
+          <div className="c-container text-center z-20 ">{props.topBar}</div>
         </div>
         <div
           className={classNames(
