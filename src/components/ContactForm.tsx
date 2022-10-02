@@ -10,12 +10,14 @@ const ContactForm = (props: ContactFormProps) => (
   <>
     <form
       className={`${props.width} text-center flex flex-col p-8 my-8 bg-opacityColor-100 rounded-md text-black `}
-      name="simpleContactForm"
+      name="contactForm"
+      action="/thanks"
       method="POST"
       data-netlify="true"
       data-netlify-honeypot="bot-field"
     >
       <p className="hidden">
+        <input type="hidden" name="form-name" value="contactForm" />
         <label id="contact-form-bot-label">
           Dont fill this out if youre human:
           <input name="bot-field" aria-labelledby="contact-form-bot-label" />
