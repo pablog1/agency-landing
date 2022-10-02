@@ -50,7 +50,6 @@ const ContactForm = (props: ContactFormProps) => (
         placeholder="Message"
         id="contact-form-message"
       ></textarea>
-      <div data-netlify-recaptcha="true" className="form-row"></div>
       <div className="mb-40"></div>
       <Button className="bg-primary-500 py-4 text-base " type="submit">
         GET IN TOUCH
