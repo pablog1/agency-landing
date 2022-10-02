@@ -8,7 +8,7 @@ type IBackgroundProps = {
 const BackgroundImage = (props: IBackgroundProps) => (
   <Image
     layout="fill"
-    className="object-center object-cover pointer-events-none"
+    className="object-center object-cover pointer-events-none brightness-[0.4]"
     src={props.src}
     alt={props.alt}
   />

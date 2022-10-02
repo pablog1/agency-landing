@@ -18,7 +18,7 @@ type HeaderProps = {
 const Header = (props: HeaderProps) => {
   const [offset, setOffset] = useState(0);
   const [offsetColors, setOffsetColors] = useState(0);
-  const [headerBackground, setHeaderBackground] = useState('#ededed9c');
+  const [headerBackground, setHeaderBackground] = useState('#ffffff');
 
   function generateRandomIntegerInRange(min: number, max: number) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -90,7 +90,7 @@ const Header = (props: HeaderProps) => {
         </div>
         <div
           className={classNames(
-            'transition duration-300  w-full bg-[#ffffff80] hidden md:block fixed top-0 z-10',
+            'transition duration-300  w-full hidden md:block fixed top-0 z-10',
             {
               'header-padding-small': offset > 2,
               'header-padding-big': offset <= 2,

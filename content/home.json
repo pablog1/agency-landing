@@ -148,16 +148,25 @@
     "benefits_icon": "img/tick_icon.svg",
     "benefits": [
       {
-        "icon": "img/tick_icon.svg",
-        "title": "Custom Shopify & Shopify Plus development."
+        "title": "Custom Shopify development."
       },
       {
-        "icon": "img/tick_icon.svg",
-        "title": "Fixes, optimizations, migrations and integrations with other platforms."
+        "title": "Shopify Plus experts."
       },
       {
-        "icon": "img/tick_icon.svg",
-        "title": "Built from scratch, with amazing design and optimized for marketing."
+        "title": "Fixes, optimizations, migrations."
+      },
+      {
+        "title": "Integrations with other platforms."
+      },
+      {
+        "title": "Built from scratch."
+      },
+      {
+        "title": "Amazing design."
+      },
+      {
+        "title": "Optimized for marketing."
       }
     ]
   },
