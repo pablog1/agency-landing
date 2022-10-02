@@ -37,6 +37,7 @@ module.exports = withMT({
         opacityColor: {
           100: '#f9f9f9cc',
           200: '#ebffeceb',
+          300: '#ededed9c',
         },
         gray: {
           100: '#f7fafc',

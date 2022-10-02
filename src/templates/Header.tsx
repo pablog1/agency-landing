@@ -18,7 +18,7 @@ type HeaderProps = {
 const Header = (props: HeaderProps) => {
   const [offset, setOffset] = useState(0);
   const [offsetColors, setOffsetColors] = useState(0);
-  const [headerBackground, setHeaderBackground] = useState('#ffffff90');
+  const [headerBackground, setHeaderBackground] = useState('#ededed9c');
 
   function generateRandomIntegerInRange(min: number, max: number) {
     return Math.floor(Math.random() * (max - min + 1)) + min;

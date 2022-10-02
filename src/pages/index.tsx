@@ -7,7 +7,7 @@ import { Footer } from '../templates/Footer';
 import { Header } from '../templates/Header';
 import { Hero } from '../templates/Hero';
 import { ImageTextBlocks } from '../templates/ImageTextBlocks';
-import { LogoGrid } from '../templates/LogoGrid';
+import { LogosCarousel } from '../templates/logoCarousel';
 import { OurClients } from '../templates/OurClients';
 import { Services } from '../templates/ServicesCard';
 
@@ -68,7 +68,8 @@ const Index = (props: {
     <ImageTextBlocks content={props.images_text.block} />
     <OurClients content={props.ourClients} />
     <Services content={props.services} />
-    <LogoGrid content={props.someApps} />
+    {/* <LogoGrid content={props.someApps} /> */}
+    <LogosCarousel content={props.someApps} />
     <AccordionTemp content={props.faq} />
     <AboutUs content={props.about} />
     <ContactFormFooter />

@@ -1,9 +1,14 @@
 import Image from 'next/image';
+import ReactTypingEffect from 'react-typing-effect';
 
 import { BackgroundImage } from '../background/BackgroundImage';
 
 const Hero = ({ content }: any) => {
   const { partnerLogos } = content;
+  const { benefits } = content;
+  const title = benefits.map((elem: any) => elem.title);
+  console.log(title);
+
   return (
     <section className="relative pt-32">
       <div>
@@ -14,12 +19,18 @@ const Hero = ({ content }: any) => {
       </div>
 
       <div className="c-container mx-auto flex flex-col lg:flex-row items-center justify-between relative pb-8">
-        <div className="lg:w-3/5 rounded-md bg-opacityColor-100 p-8">
+        <div className="lg:w-3/5 rounded-md bg-opacityColor-300 p-8">
           <div className="h1 mb-8 ">{content.heading}</div>
-          <ul className="font-bold">
-            {Object.keys(content.benefits).map((keyName, i) => (
-              <li key={i}>{content.benefits[keyName].title}</li>
-            ))}
+          <ul className="font-bold text-3xl min-h-[200px]">
+            <li>
+              {/* https://www.npmjs.com/package/react-typing-effect */}
+              <ReactTypingEffect
+                text={title}
+                typingDelay={500}
+                speed={50}
+                eraseSpeed={0}
+              />
+            </li>
           </ul>
         </div>
         <style jsx>
@@ -27,7 +38,7 @@ const Hero = ({ content }: any) => {
             li {
               background: url(/${content.benefits_icon}) no-repeat left top;
               padding-left: 30px;
-              margin-bottom: 30px;
+              background-position: 0 9px;
             }
           `}
         </style>
