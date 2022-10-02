@@ -1,5 +1,6 @@
 import className from 'classnames';
 import Image from 'next/image';
+import Link from 'next/link';
 import ReactMarkdown from 'react-markdown';
 
 type IVerticalFeatureRowProps = {
@@ -31,13 +32,17 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
         <div className="mt-6">
           <ReactMarkdown>{props.description}</ReactMarkdown>
         </div>
-        <div className="mt-6 font-bold">{props.cta_text}</div>
+        <p className="className=mt-6 font-bold pt-2 text-primary-400 hover:scale-105 w-fit duration-300">
+          <Link href="/#footerContactForm">
+            <a>{props.cta_text}</a>
+          </Link>
+        </p>
       </div>
 
-      <div className="w-full lg:w-1/2 pt-4 lg:p-6 relative pb-12">
+      <div className="w-full lg:w-1/2 pt-4 relative pb-12">
         <Image
           layout="intrinsic"
-          className="object-center object-cover pointer-events-none"
+          className="object-center object-cover pointer-events-none rounded-md"
           src={props.image}
           alt={props.imageAlt}
           width="1500"

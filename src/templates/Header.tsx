@@ -73,18 +73,13 @@ const Header = (props: HeaderProps) => {
           </Link>
         </li>
         <li>
-          <Link href="/newpage">
-            <a>New page</a>
+          <Link href="/#about">
+            <a>About</a>
           </Link>
         </li>
         <li>
-          <Link href="https://github.com/ixartz/Next-JS-Landing-Page-Starter-Template">
-            <a>GitHub</a>
-          </Link>
-        </li>
-        <li>
-          <Link href="/">
-            <a>Sign in</a>
+          <Link href="/#footerContactForm">
+            <a>Contact</a>
           </Link>
         </li>
       </Sidebar>
@@ -113,8 +108,7 @@ const Header = (props: HeaderProps) => {
               }
               .header-padding-small {
                 padding: 0;
-                transition: 300ms ease;
-                transition: background-color 1s ease;
+                transition: 300ms ease, background-color 1s ease;
               }
             `}
           </style>
@@ -132,17 +126,17 @@ const Header = (props: HeaderProps) => {
               }
             >
               <li className="z-10 hover:bg-red-500 hover:text-white duration-1000 p-1 rounded-md">
-                <Link href="/newpage">
+                <Link href="/">
                   <a>Home</a>
                 </Link>
               </li>
               <li className="z-10 hover:bg-orange-500 hover:text-white duration-1000 p-1 rounded-md">
-                <Link href="https://github.com/ixartz/Next-JS-Landing-Page-Starter-Template">
+                <Link href="/#about">
                   <a>About</a>
                 </Link>
               </li>
               <li className="z-10 hover:bg-green-500 hover:text-white duration-1000 p-1 rounded-md">
-                <Link href="/">
+                <Link href="/#footerContactForm">
                   <a>Contact</a>
                 </Link>
               </li>

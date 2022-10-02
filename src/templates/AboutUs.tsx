@@ -4,7 +4,7 @@ import ReactMarkdown from 'react-markdown';
 const AboutUs = ({ content }: any) => {
   const { block } = content;
   return (
-    <section className="relative c-container pt-12 pb-4">
+    <section id="about" className="relative c-container pt-12 pb-4">
       {Object.keys(block).map((keyName, i) => (
         <div
           key={i}

@@ -1,7 +1,6 @@
 import Image from 'next/image';
 
 import { BackgroundImage } from '../background/BackgroundImage';
-import { ContactForm } from '../components/ContactForm';
 
 const Hero = ({ content }: any) => {
   const { partnerLogos } = content;
@@ -15,7 +14,7 @@ const Hero = ({ content }: any) => {
       </div>
 
       <div className="c-container mx-auto flex flex-col lg:flex-row items-center justify-between relative pb-8">
-        <div className="lg:w-2/5  lg:mr-8 rounded-md bg-opacityColor-100 p-8">
+        <div className="lg:w-3/5 rounded-md bg-opacityColor-100 p-8">
           <div className="h1 mb-8 ">{content.heading}</div>
           <ul className="font-bold">
             {Object.keys(content.benefits).map((keyName, i) => (
@@ -32,11 +31,13 @@ const Hero = ({ content }: any) => {
             }
           `}
         </style>
+        {/*
         <ContactForm
           firstTitle="Let's work"
           secondTitle="together"
           width="w-full lg:w-2/5"
         />
+          */}
       </div>
       <div className="bg-opacityColor-200 relative">
         <ul className="c-container flex justify-between ">

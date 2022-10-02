@@ -2,6 +2,7 @@ import { useState, ReactNode, useEffect } from 'react';
 
 import classNames from 'classnames';
 import Image from 'next/image';
+import Link from 'next/link';
 
 type INavbarProps = {
   children: ReactNode;
@@ -45,13 +46,17 @@ const Sidebar = (props: INavbarProps) => {
         </button>
 
         <div className="logo relative w-[140px] h-[50px]">
-          <Image
-            src={`/${props.logo}`}
-            objectFit="fill"
-            layout="fill"
-            alt="Logo"
-            className="brightness-0"
-          />
+          <Link href="/">
+            <a>
+              <Image
+                src={`/${props.logo}`}
+                objectFit="fill"
+                layout="fill"
+                alt="Logo"
+                className="brightness-0"
+              />
+            </a>
+          </Link>
         </div>
       </nav>
 
@@ -68,7 +73,10 @@ const Sidebar = (props: INavbarProps) => {
       >
         <ul
           className="text-2xl font-semibold text-black"
-          onClick={() => setShowSidebar(!showSidebar)}
+          onClick={() => {
+            setShowSidebar(!showSidebar);
+            setActive(!isActive);
+          }}
         >
           {props.children}
         </ul>

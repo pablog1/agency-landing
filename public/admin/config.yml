@@ -14,6 +14,8 @@ collections:
       fields:
         - {label: "Site name", name: "siteName", widget: "string"}
         - {label: "Logo", name: "logo", widget: "image"}
+        - {label: "Top announcement bar", name: "topBar", widget: "string", default: "Shopify custom Development"}
+
   - name: "pages"
     label: "Pages"
     files:
