@@ -13,7 +13,6 @@ const ContactForm = (props: ContactFormProps) => (
     method="POST"
     data-netlify="true"
     data-netlify-honeypot="bot-field"
-    id="simple-contact-form"
   >
     <p className="hidden">
       <label id="contact-form-bot-label">
@@ -32,7 +31,6 @@ const ContactForm = (props: ContactFormProps) => (
         type="text"
         name="Name"
         placeholder="Your Name *"
-        id="contact-form-name"
       ></input>
       <input
         required
@@ -40,14 +38,12 @@ const ContactForm = (props: ContactFormProps) => (
         type="email"
         name="email"
         placeholder="Your Email *"
-        id="contact-form-email"
       ></input>
       <textarea
         required
         className="formField"
         name="email"
         placeholder="Message"
-        id="contact-form-message"
       ></textarea>
       <div className="mb-40"></div>
       <Button className="bg-primary-500 py-4 text-base " type="submit">
