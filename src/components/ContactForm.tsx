@@ -11,7 +11,6 @@ const ContactForm = (props: ContactFormProps) => (
     className={`${props.width} text-center flex flex-col p-8 my-8 bg-opacityColor-100 rounded-md text-black `}
     name="simpleContactForm"
     method="POST"
-    action="/pages/thanks"
     data-netlify="true"
     data-netlify-honeypot="bot-field"
     id="simple-contact-form"
