@@ -9,7 +9,20 @@ type ContactFormProps = {
 const ContactForm = (props: ContactFormProps) => (
   <form
     className={`${props.width} text-center flex flex-col p-8 my-8 bg-opacityColor-100 rounded-md text-black `}
+    name="simpleContactForm"
+    method="POST"
+    action="/thanks"
+    data-netlify="true"
+    data-netlify-honeypot="bot-field"
+    id="simple-contact-form"
   >
+    <p className="hidden">
+      <label id="contact-form-bot-label">
+        Dont fill this out if youre human:
+        <input name="bot-field" aria-labelledby="contact-form-bot-label" />
+      </label>
+    </p>
+
     <div className="h2 pb-8">
       <span className="text-black">{props.firstTitle}</span> {props.secondTitle}
     </div>
@@ -20,6 +33,7 @@ const ContactForm = (props: ContactFormProps) => (
         type="text"
         name="Name"
         placeholder="Your Name *"
+        id="contact-form-name"
       ></input>
       <input
         required
@@ -27,15 +41,20 @@ const ContactForm = (props: ContactFormProps) => (
         type="email"
         name="email"
         placeholder="Your Email *"
+        id="contact-form-email"
       ></input>
       <textarea
         required
         className="formField"
         name="email"
         placeholder="Message"
+        id="contact-form-message"
       ></textarea>
+      <div data-netlify-recaptcha="true" className="form-row"></div>
       <div className="mb-40"></div>
-      <Button className="bg-primary-500 py-4 text-base ">GET IN TOUCH</Button>
+      <Button className="bg-primary-500 py-4 text-base " type="submit">
+        GET IN TOUCH
+      </Button>
     </div>
 
     <style jsx>
