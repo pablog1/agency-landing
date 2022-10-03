@@ -13,12 +13,14 @@ const Footer = (props: FooterProps) => (
   <Background color="bg-primary-400 text-white py-4">
     <CenteredFooter
       logo={
-        <Logo
-          textColor="text-white"
-          iconColor="text-white"
-          logo={props.logo}
-          siteName={props.siteName}
-        />
+        <div className="brightness-0 invert">
+          <Logo
+            textColor="text-white"
+            iconColor="text-white"
+            logo={props.logo}
+            siteName={props.siteName}
+          />
+        </div>
       }
       iconList={
         <>

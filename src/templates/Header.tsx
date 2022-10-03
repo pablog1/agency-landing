@@ -33,16 +33,16 @@ const Header = (props: HeaderProps) => {
         const value = generateRandomIntegerInRange(1, 4);
         switch (value) {
           case 1:
-            setHeaderBackground('#d9d9fdf0');
+            setHeaderBackground('#f7a45a');
             break;
           case 2:
-            setHeaderBackground('#f4d9fdf0');
+            setHeaderBackground('#dbf75a');
             break;
           case 3:
-            setHeaderBackground('#d9fdf3f0');
+            setHeaderBackground('#5af7e5');
             break;
           case 4:
-            setHeaderBackground('#fdead9f0');
+            setHeaderBackground('#5a5bf7');
             break;
 
           default:
@@ -85,7 +85,7 @@ const Header = (props: HeaderProps) => {
         </li>
       </Sidebar>
       <section className="">
-        <div className="bg-black text-white relative z-30">
+        <div className="bg-black text-white relative z-30 topbar">
           <div className="c-container text-center z-20 ">{props.topBar}</div>
         </div>
         <div
@@ -111,7 +111,7 @@ const Header = (props: HeaderProps) => {
               }
             `}
           </style>
-          <div className="c-container">
+          <div className="c-container desktop-header">
             <NavbarTwoColumns
               offset={offset}
               logo={

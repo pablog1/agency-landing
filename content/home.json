@@ -2,20 +2,12 @@
   "someApps": {
     "app": [
       {
-        "image": "img/figma.svg",
-        "alt_text": "Figma"
+        "image": "img/logo_recharge.png",
+        "alt_text": "Recharge"
       },
       {
-        "image": "img/reactjs.svg",
-        "alt_text": "React"
-      },
-      {
-        "image": "img/figma.svg",
-        "alt_text": "Figma"
-      },
-      {
-        "image": "img/reactjs.svg",
-        "alt_text": "React"
+        "image": "img/logo_klaviyo.png",
+        "alt_text": "Klaviyo"
       },
       {
         "image": "img/figma.svg",
@@ -26,12 +18,12 @@
         "alt_text": "React"
       },
       {
-        "image": "img/figma.svg",
-        "alt_text": "Figma"
+        "image": "img/logo_okendo.png",
+        "alt_text": "Okendo"
       },
       {
-        "image": "img/reactjs.svg",
-        "alt_text": "React"
+        "image": "img/logo_octane.png",
+        "alt_text": "Octane"
       }
     ]
   },
