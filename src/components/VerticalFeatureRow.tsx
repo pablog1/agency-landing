@@ -20,6 +20,7 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
     'lg:flex-row',
     'items-center',
     'text-black',
+    'vertical-blocks mb-16 lg:mb-0',
     {
       'lg:flex-row-reverse': !props.reverse,
     }
@@ -29,6 +30,16 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
     <div className={verticalFeatureClass}>
       <div className="w-full lg:w-1/2 lg:px-6">
         <h3 className="h3">{props.title}</h3>
+        <div className="w-full lg:w-1/2 pt-4 relative  lg:hidden">
+          <Image
+            layout="intrinsic"
+            className="object-center object-cover pointer-events-none rounded-md"
+            src={props.image}
+            alt={props.imageAlt}
+            width="1500"
+            height="1000"
+          />
+        </div>
         <div className="mt-6">
           <ReactMarkdown>{props.description}</ReactMarkdown>
         </div>
@@ -39,7 +50,7 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
         </p>
       </div>
 
-      <div className="w-full lg:w-1/2 pt-4 relative pb-12">
+      <div className="w-full lg:w-1/2 pt-4 relative pb-12 hidden lg:block">
         <Image
           layout="intrinsic"
           className="object-center object-cover pointer-events-none rounded-md"

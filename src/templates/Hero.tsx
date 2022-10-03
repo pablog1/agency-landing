@@ -21,9 +21,11 @@ const Hero = ({ content }: any) => {
         </div>
 
         <div className="c-container mx-auto flex flex-col lg:flex-row items-center justify-between relative pb-8">
-          <div className="lg:w-3/5 rounded-md  p-8">
-            <div className="h1 mb-8 !text-white">{content.heading}</div>
-            <ul className="font-bold text-primary-600 text-3xl pb-12">
+          <div className="lg:w-3/5 rounded-md  py-8 px-4">
+            <div className="h1 mb-8 !text-2xl !md:text-4xl !leading-8 !md:leading-10 !text-white">
+              {content.heading}
+            </div>
+            <ul className="font-bold text-primary-600 text-base md:text-3xl pb-12">
               <li>
                 {/* https://www.npmjs.com/package/react-typing-effect */}
                 <ReactTypingEffect
@@ -44,7 +46,8 @@ const Hero = ({ content }: any) => {
              {/* eslint-enable */}
             </Button>
           </div>
-          <style jsx>
+          {/*           
+              <style jsx>
             {`
               .xxxx li {
                 background: url(/${content.benefits_icon}) no-repeat left top;
@@ -52,7 +55,8 @@ const Hero = ({ content }: any) => {
                 background-position: 0 9px;
               }
             `}
-          </style>
+          </style> */}
+
           {/*
         <ContactForm
           firstTitle="Let's work"
