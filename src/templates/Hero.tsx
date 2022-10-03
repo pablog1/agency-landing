@@ -22,10 +22,10 @@ const Hero = ({ content }: any) => {
 
         <div className="c-container mx-auto flex flex-col lg:flex-row items-center justify-between relative pb-8">
           <div className="lg:w-3/5 rounded-md  py-8 px-4">
-            <div className="h1 mb-8 !text-2xl !md:text-4xl !leading-8 !md:leading-10 !text-white">
+            <div className=" mb-8 text-2xl md:text-4xl xl:text-[3vw] xl:leading-[4vw] leading-8 font-bold md:leading-10 !text-white">
               {content.heading}
             </div>
-            <ul className="font-bold text-primary-600 text-base md:text-3xl pb-12">
+            <ul className="font-bold text-primary-600 text-base md:text-3xl pb-12 xl:text-[2vw] xl:leading-[3vw]">
               <li>
                 {/* https://www.npmjs.com/package/react-typing-effect */}
                 <ReactTypingEffect
