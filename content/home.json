@@ -74,7 +74,7 @@
         "cta_text": "Contact Us"
       },
       {
-        "image": "img/charlesdeluvio-lks7vei-eag-unsplash.jpg",
+        "image": "img/custom-dev.jpg",
         "alt_text": "Custom development",
         "heading": "Custom Development",
         "description": "Starting from 0 or already running a store but need to take that extra step? \n\nFrom design changes to migrations and integrations, we can help your business.",
@@ -130,7 +130,7 @@
     "subheading": "That's the Subheading",
     "name": "aaaa",
     "mobileBackgroundImage": "img/christin-hume-hcfwew744z4-unsplash.jpg",
-    "backgroundImage": "img/annie-spratt-wgivdx9dbdq-unsplash.jpg",
+    "backgroundImage": "img/charlesdeluvio-lks7vei-eag-unsplash.jpg",
     "birthdate": "09/14/2022",
     "address": {
       "street": "asadf",
