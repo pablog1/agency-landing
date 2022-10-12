@@ -17,29 +17,10 @@ type HeaderProps = {
 
 const Header = (props: HeaderProps) => {
   const [offset, setOffset] = useState(0);
-  const [offsetColors, setOffsetColors] = useState(0);
-  const [headerBackground, setHeaderBackground] = useState('#000000');
-
-  function generateRandomIntegerInRange(min: number, max: number) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-  }
 
   useEffect(() => {
     const onScroll = () => {
       setOffset(window.pageYOffset);
-      // random background color
-      if (Math.abs(offsetColors - offset) > 400) {
-        setOffsetColors(window.pageYOffset);
-        const value = generateRandomIntegerInRange(1, 4);
-        switch (value) {
-          case 1:
-            setHeaderBackground('#ffffff');
-            break;
-
-          default:
-            setHeaderBackground('#fff');
-        }
-      }
     };
 
     // clean up code
@@ -54,11 +35,7 @@ const Header = (props: HeaderProps) => {
     <>
       <Meta title={AppConfig.title} description={AppConfig.description} />
 
-      <Sidebar
-        logo={props.logo}
-        siteName={props.siteName}
-        backgroundColor={headerBackground}
-      >
+      <Sidebar logo={props.logo} siteName={props.siteName}>
         <li>
           <Link href="/">
             <a>Home</a>
