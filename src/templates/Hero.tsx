@@ -21,7 +21,7 @@ const Hero = ({ content }: any) => {
         </div>
 
         <div className="c-container mx-auto flex flex-col lg:flex-row items-center justify-between relative pb-8">
-          <div className="lg:w-3/5 rounded-md  py-8 px-4">
+          <div className="lg:w-3/5 rounded-md  py-32 px-4">
             <div className=" mb-8 text-2xl md:text-4xl xl:text-[3vw] xl:leading-[4vw] leading-8 font-bold md:leading-10 !text-white">
               {content.heading}
             </div>

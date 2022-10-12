@@ -13,7 +13,7 @@ const NavbarTwoColumns = (props: INavbarProps) => (
   <div className="flex flex-wrap justify-between items-center min-h[80px]">
     <div
       className={classNames(
-        'pl-20 md:pl-0 z-10 hidden md:block brightness-0 logo',
+        'pl-20 md:pl-0 z-10 hidden md:block brightness-0 invert logo',
         {
           'logo-small': props.offset > 0,
         }

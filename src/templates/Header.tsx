@@ -18,7 +18,7 @@ type HeaderProps = {
 const Header = (props: HeaderProps) => {
   const [offset, setOffset] = useState(0);
   const [offsetColors, setOffsetColors] = useState(0);
-  const [headerBackground, setHeaderBackground] = useState('#ffffff');
+  const [headerBackground, setHeaderBackground] = useState('#000000');
 
   function generateRandomIntegerInRange(min: number, max: number) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -33,16 +33,7 @@ const Header = (props: HeaderProps) => {
         const value = generateRandomIntegerInRange(1, 4);
         switch (value) {
           case 1:
-            setHeaderBackground('#f7a45a');
-            break;
-          case 2:
-            setHeaderBackground('#dbf75a');
-            break;
-          case 3:
-            setHeaderBackground('#5af7e5');
-            break;
-          case 4:
-            setHeaderBackground('#5a5bf7');
+            setHeaderBackground('#ffffff');
             break;
 
           default:
@@ -85,7 +76,7 @@ const Header = (props: HeaderProps) => {
         </li>
       </Sidebar>
       <section className="">
-        <div className="bg-black text-white relative z-30 topbar">
+        <div className="bg-white text-black relative z-30 topbar">
           <div className="c-container text-center z-20 ">{props.topBar}</div>
         </div>
         <div
