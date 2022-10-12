@@ -1,14 +1,12 @@
-import { AppConfig } from '../utils/AppConfig';
-
 const FooterCopyright = () => (
   <div className="footer-copyright">
-    © Copyright {new Date().getFullYear()} {AppConfig.title}. Powered with
-    <span role="img" aria-label="Love">
+    © Copyright {new Date().getFullYear()} - Powered with
+    <span role="img" aria-label="Love" className="mx-1">
       ♥
     </span>
     by
-    <a className="!text-white" href="https://creativedesignsguru.com">
-      CreativeDesignsGuru
+    <a className="!text-white ml-1" href="https://dango.digital">
+      Dango Digital
     </a>
     {/*
      * PLEASE READ THIS SECTION

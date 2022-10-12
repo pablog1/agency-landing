@@ -40,7 +40,7 @@ const NavbarTwoColumns = (props: INavbarProps) => (
           filter: invert(1) brightness(100);
         }
         .c_invert {
-          filter: invert(0) brightness(0);
+          filter: invert(1);
         }
         .logo-small {
           filter: invert(0) brightness(0);
