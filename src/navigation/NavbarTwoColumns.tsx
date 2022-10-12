@@ -12,12 +12,9 @@ type INavbarProps = {
 const NavbarTwoColumns = (props: INavbarProps) => (
   <div className="flex flex-wrap justify-between items-center min-h[80px]">
     <div
-      className={classNames(
-        'pl-20 md:pl-0 z-10 hidden md:block brightness-0 invert logo',
-        {
-          'logo-small': props.offset > 0,
-        }
-      )}
+      className={classNames('pl-20 md:pl-0 z-10 hidden md:block logo', {
+        'logo-small': props.offset > 0,
+      })}
     >
       <Link href="/">
         <a>{props.logo}</a>
@@ -25,14 +22,28 @@ const NavbarTwoColumns = (props: INavbarProps) => (
     </div>
 
     <nav>
-      <ul className="navbar hidden md:flex items-center font-bold text-base text-gray-800 z-20">
+      <ul
+        className={classNames(
+          'navbar hidden md:flex items-center font-bold text-base text-white z-20',
+          {
+            c_invert: props.offset > 0,
+          }
+        )}
+      >
         {props.children}
       </ul>
     </nav>
 
     <style jsx>
       {`
+        .logo {
+          filter: invert(1) brightness(100);
+        }
+        .c_invert {
+          filter: invert(0) brightness(0);
+        }
         .logo-small {
+          filter: invert(0) brightness(0);
           transform: scale(0.5);
           -webkit-transform-origin-x: left;
         }

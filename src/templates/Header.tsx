@@ -75,7 +75,7 @@ const Header = (props: HeaderProps) => {
           </Link>
         </li>
       </Sidebar>
-      <section className="">
+      <section className="test">
         <div className="bg-white text-black relative z-30 topbar">
           <div className="c-container text-center z-20 ">{props.topBar}</div>
         </div>
@@ -87,18 +87,18 @@ const Header = (props: HeaderProps) => {
               'header-padding-big': offset <= 2,
             }
           )}
-          style={{ backgroundColor: headerBackground }}
         >
           <style jsx>
             {`
               .header-padding-big {
                 padding: 2rem 0 1rem;
                 transition: 300ms ease;
-                background-color: #ffffff90;
+                background-color: #000000;
               }
               .header-padding-small {
                 padding: 0;
                 transition: 300ms ease, background-color 1s ease;
+                background-color: #ffffff;
               }
             `}
           </style>
