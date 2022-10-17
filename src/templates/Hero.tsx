@@ -34,6 +34,7 @@ const Hero = ({ content }: any) => {
                   eraseDelay={2000}
                   speed={50}
                   eraseSpeed={0}
+                  cursorClassName={'typing__cursor'}
                 />
               </li>
             </ul>
