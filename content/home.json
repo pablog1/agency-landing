@@ -97,12 +97,12 @@
     "alt_text": "image",
     "question": [
       {
-        "question": "Can you help us with for our ecommerce website?",
-        "answer": "We’ll guide you on your e-commerce journey and get your online store up and running on the Shopify platform. **We’ll guide you on your e-commerce** journey and get your online store up and running on the Shopify platform. We’ll guide you on your e-commerce journey and get your online store up and running on the Shopify platform."
-      },
-      {
         "question": "Why Shopify?",
         "answer": "First, Shopify is a cloud-based solution (i.e. you are using a service instead of owning the platform) by millions of different kinds of stores around the world. The platform is generated and maintained by a team of around 10,000 Shopify employees.\n\nBesides Shopify, it is popular because of its easy management and modern design. Customizers can set up their store independently and quickly without knowing any coding or technical know-how. If any additional functionality is missing, it is simple to install a third-party app. Shopify App Store features in excess of 7,000 downloadable apps (with 3,000 additionally available for free)."
+      },
+      {
+        "question": "How much does Shopify cost?",
+        "answer": "Shopify offers four pricing plans: Basic (from $24 per month), Standard (from $69 per month), Advanced (from $299 per month), and Shopify Plus (often around $2,500 per month). Each plan provides a risk-free 14-day trial period. \n\nBesides the monthly fee, you also need to pay transaction fees. They start at 0.9% + $30¢ per credit card transaction."
       },
       {
         "question": "Can you help us support for our ecommerce website?",
