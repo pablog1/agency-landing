@@ -9,7 +9,7 @@ type ContactFormProps = {
 const ContactForm = (props: ContactFormProps) => (
   <>
     <form
-      className={`${props.width} text-center flex flex-col px-8 mt-8 mb-8 bg-opacityColor-100 rounded-md text-black `}
+      className={`${props.width} text-center flex flex-col px-8 mt-20  mb-8 bg-opacityColor-100 rounded-md text-black `}
       name="contactForm"
       action="/thanks"
       method="POST"
