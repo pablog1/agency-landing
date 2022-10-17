@@ -10,7 +10,7 @@ const AboutUs = ({ content }: any) => {
           key={i}
           className="flex flex-col md:flex-row md:justify-evenly items-center relative text-black py-5 pb-16"
         >
-          <div className="relative h-[150px] md:w-2/5">
+          <div className="relative h-[350px] w-full md:w-2/5">
             <Image
               layout="fill"
               className="object-center object-contain pointer-events-none"
