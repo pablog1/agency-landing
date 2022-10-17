@@ -109,8 +109,8 @@
         "answer": "Yes. We recommend Shopify Plus if you are running a large e-commerce business as it offers many customization options, including script-written code, separate checkout process, and headless integrations."
       },
       {
-        "question": "Can you help us support for our ecommerce website?",
-        "answer": "We’ll guide you on your e-commerce journey and get your online store up and running on the Shopify platform. **We’ll guide you on your e-commerce** journey and get your online store up and running on the Shopify platform. We’ll guide you on your e-commerce journey and get your online store up and running on the Shopify platform."
+        "question": "Can I migrate from another e-commerce platform to Shopify?",
+        "answer": "There are a couple of ways you can migrate your existing data. You can do it manually via CSV files, use a third-party migration app, or find a partner, such as Dango, to help with that. \n\nWe can help you migrate from any platform to Shopify using custom import. Migration usually includes product catalog, orders, customers, and content pages."
       }
     ]
   },
