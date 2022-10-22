@@ -1,9 +1,50 @@
 import fs from 'fs';
 
+import Image from 'next/image';
 import ReactMarkdown from 'react-markdown';
 
 import { Footer } from '../../templates/Footer';
 import { Header } from '../../templates/Header';
+
+const MarkdownComponents: object = {
+  // Code will go here
+
+  p: (paragraph: { children?: boolean; node?: any }) => {
+    const { node } = paragraph;
+
+    if (node.children[0].tagName === 'img') {
+      const image = node.children[0];
+      const metastring = image.properties.alt;
+      const alt = metastring?.replace(/ *\{[^)]*\} */g, '');
+      const metaWidth = metastring.match(/{([^}]+)x/);
+      const metaHeight = metastring.match(/x([^}]+)}/);
+      const width = metaWidth ? metaWidth[1] : '768';
+      const height = metaHeight ? metaHeight[1] : '432';
+      const isPriority = metastring?.toLowerCase().match('{priority}');
+      const hasCaption = metastring?.toLowerCase().includes('{caption:');
+      const caption = metastring?.match(/{caption: (.*?)}/)?.pop();
+
+      return (
+        <div className="postImgWrapper flex justify-center py-8">
+          <Image
+            src={`/${image.properties.src}`}
+            width={width}
+            height={height}
+            className="postImg"
+            alt={alt}
+            priority={isPriority}
+          />
+          {hasCaption ? (
+            <div className="caption" aria-label={caption}>
+              {caption}
+            </div>
+          ) : null}
+        </div>
+      );
+    }
+    return <p>{paragraph.children}</p>;
+  },
+};
 
 export const getStaticPaths = async () => {
   const files = fs.readdirSync('content/case_studies');
@@ -56,12 +97,15 @@ const Post = (props: {
         siteName={props.siteName}
         topBar={props.topBar}
       />
-      <div className="mt-32">
-        {console.log(props.article.body)}
-        <ReactMarkdown>{props.article.body}</ReactMarkdown>
+      <article className="c-container">
+        <h1 className="h1 mt-32 mb-4">{props.article.title}</h1>
+        <ReactMarkdown
+          // eslint-disable-next-line react/no-children-prop
+          children={props.article.body}
+          components={MarkdownComponents}
+        />
+      </article>
 
-        <p>Post: ??</p>
-      </div>
       <Footer logo={props.logo} siteName={props.siteName} />
     </>
   );
