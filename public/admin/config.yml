@@ -139,3 +139,15 @@ collections:
                 - {label: "Image", name: "image", widget: "image"}
                 - {label: "Alt text", name: "alt_text", widget: "string"}
                 - {label: "Text", name: "text", widget: "markdown"}
+                collections:
+  - name: "case study"
+    label: "case_studies"
+    folder: "content/case_studies"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Featured Image", name: "image", widget: "image"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Body", name: "body", widget: "markdown"}
+      
