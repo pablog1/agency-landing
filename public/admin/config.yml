@@ -142,6 +142,7 @@ collections:
   - name: "case study"
     label: "Case Studies"
     folder: "content/case_studies"
+    format: "json"
     create: true
     slug: "{{slug}}"
     fields:
