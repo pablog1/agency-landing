@@ -16,23 +16,16 @@ const MarkdownComponents: object = {
       const image = node.children[0];
       const metastring = image.properties.alt;
       const alt = metastring?.replace(/ *\{[^)]*\} */g, '');
-      const metaWidth = metastring.match(/{([^}]+)x/);
-      const metaHeight = metastring.match(/x([^}]+)}/);
-      const width = metaWidth ? metaWidth[1] : '768';
-      const height = metaHeight ? metaHeight[1] : '432';
-      const isPriority = metastring?.toLowerCase().match('{priority}');
       const hasCaption = metastring?.toLowerCase().includes('{caption:');
       const caption = metastring?.match(/{caption: (.*?)}/)?.pop();
 
       return (
-        <div className="postImgWrapper flex justify-center py-8">
+        <div className="postImgWrapper flex justify-center my-8 h-[77vw] max-h-[450px] relative">
           <Image
+            layout="fill"
             src={`/${image.properties.src}`}
-            width={width}
-            height={height}
-            className="postImg"
+            className="postImg object-contain w-full"
             alt={alt}
-            priority={isPriority}
           />
           {hasCaption ? (
             <div className="caption" aria-label={caption}>
@@ -97,7 +90,7 @@ const Post = (props: {
         siteName={props.siteName}
         topBar={props.topBar}
       />
-      <article className="c-container">
+      <article className="c-container mb-8">
         <h1 className="h1 mt-32 mb-4">{props.article.title}</h1>
         <ReactMarkdown
           // eslint-disable-next-line react/no-children-prop
