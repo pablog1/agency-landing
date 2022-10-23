@@ -17,7 +17,7 @@ const ServiceCard = (props: ServiceCardProps) => (
         alt={props.alt}
       />
     </div>
-    <div className="px-3 xl:min-h-[185px]">
+    <div className="px-3">
       <p className="font-bold">{props.title}</p>
       <p>{props.subtitle}</p>
     </div>
