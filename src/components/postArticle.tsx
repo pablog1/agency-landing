@@ -58,7 +58,7 @@ const PostArticle = (props: PostArticleProps) => (
       // eslint-disable-next-line react/no-children-prop
       children={props.article.body}
       components={MarkdownComponents}
-      className="!max-w-screen-lg mx-auto prose-p:mb-8"
+      className="article!max-w-screen-lg mx-auto prose-p:mb-8 prose-headings:font-bold prose-headings:mb-4 prose-h2:text-2xl prose-h3:text-lg "
     />
   </article>
 );

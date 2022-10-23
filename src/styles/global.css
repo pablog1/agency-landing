@@ -22,6 +22,6 @@ p {@apply text-lg}
   color: white
 }
 
-.hover-state__link {
-  @apply hover:scale-105 duration-300 font-bold text-primary-400;
+.hover-state__link, article a {
+  @apply hover:scale-105 duration-300 font-bold text-primary-400 inline-block;
 }
