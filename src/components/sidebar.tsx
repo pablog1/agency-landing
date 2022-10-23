@@ -70,7 +70,7 @@ const Sidebar = (props: INavbarProps) => {
         )}
       >
         <ul
-          className="text-2xl font-semibold text-black"
+          className="text-2xl font-semibold text-black space-y-2"
           onClick={() => {
             setShowSidebar(!showSidebar);
             setActive(!isActive);
