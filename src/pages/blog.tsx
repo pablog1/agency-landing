@@ -57,7 +57,7 @@ const Blog = (props: {
         siteName={props.siteName}
         topBar={props.topBar}
       />
-      <section className="c-container pt-32 pb-12">
+      <section className="c-container pt-24 md:pt-28 pb-12">
         <h1 className="h1 text-center mb-8">Our Blog</h1>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">

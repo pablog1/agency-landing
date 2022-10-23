@@ -40,7 +40,7 @@ const MarkdownComponents: object = {
 
 const PostArticle = (props: PostArticleProps) => (
   <article className="c-container !max-w-screen-2xl mb-8">
-    <h1 className="h1 mt-32 mb-4 text-center !text-black">
+    <h1 className="h1 pt-24 md:pt-28  text-center !text-black">
       {props.article.title}
     </h1>
     <picture className="flex justify-center py-12">
