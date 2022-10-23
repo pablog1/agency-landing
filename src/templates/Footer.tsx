@@ -50,6 +50,11 @@ const Footer = (props: FooterProps) => (
         </Link>
       </li>
       <li>
+        <Link href="/blog">
+          <a>Blog</a>
+        </Link>
+      </li>
+      <li>
         <Link href="/#footerContactForm">
           <a>Contact</a>
         </Link>

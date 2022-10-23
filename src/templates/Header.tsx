@@ -52,6 +52,11 @@ const Header = (props: HeaderProps) => {
           </Link>
         </li>
         <li>
+          <Link href="/blog">
+            <a>Blog</a>
+          </Link>
+        </li>
+        <li>
           <Link href="/#footerContactForm">
             <a>Contact</a>
           </Link>
@@ -110,6 +115,11 @@ const Header = (props: HeaderProps) => {
               <li className="z-10 hover:bg-orange-500 hover:text-white duration-1000 p-1 rounded-md">
                 <Link href="/#about">
                   <a>About</a>
+                </Link>
+              </li>
+              <li className="z-10 hover:bg-yellow-500 hover:text-white duration-1000 p-1 rounded-md">
+                <Link href="/blog">
+                  <a>Blog</a>
                 </Link>
               </li>
               <li className="z-10 hover:bg-green-500 hover:text-white duration-1000 p-1 rounded-md">
