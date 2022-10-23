@@ -2,6 +2,7 @@ import fs from 'fs';
 
 import { AboutUs } from '../templates/AboutUs';
 import { AccordionTemp } from '../templates/AccordionTemp';
+import { CaseStudies } from '../templates/CaseStudies';
 import { ContactFormFooter } from '../templates/ContactFormFooter';
 import { Footer } from '../templates/Footer';
 import { Header } from '../templates/Header';
@@ -19,6 +20,23 @@ export const getStaticProps = async () => {
   const homeJsonFile = JSON.parse(
     fs.readFileSync('content/home.json').toString()
   );
+
+  // Case studies
+  const files = fs.readdirSync('content/case_studies');
+  const paths = files.map((filename) => ({
+    caseStudy: [
+      JSON.parse(
+        fs.readFileSync(`content/case_studies/${filename}`).toString()
+      ),
+      filename,
+    ],
+  }));
+  const caseStudiesExtract = paths.map((item) => {
+    // eslint-disable-next-line no-param-reassign
+    delete item.caseStudy[0].body;
+    // console.log(item.caseStudy);
+    return item.caseStudy;
+  });
 
   const { hero } = homeJsonFile;
   const { numbers } = homeJsonFile;
@@ -44,6 +62,7 @@ export const getStaticProps = async () => {
       someApps,
       faq,
       about,
+      caseStudiesExtract,
     },
   };
 };
@@ -55,6 +74,7 @@ const Index = (props: {
   hero: object;
   numbers: object;
   images_text: any;
+  caseStudiesExtract: object;
   ourClients: object;
   services: object;
   someApps: object;
@@ -66,6 +86,7 @@ const Index = (props: {
     <Hero content={props.hero} />
     {/* <Numbers content={props.numbers} /> */}
     <ImageTextBlocks content={props.images_text.block} />
+    <CaseStudies content={props.caseStudiesExtract} />
     <OurClients content={props.ourClients} />
     <Services content={props.services} />
     {/* <LogoGrid content={props.someApps} /> */}
