@@ -10,7 +10,7 @@ import ReactMarkdown from 'react-markdown';
 
 const AccordionTemp = ({ content }: any) => {
   const { question } = content;
-  const [open, setOpen] = useState(0);
+  const [open, setOpen] = useState(-1);
 
   const handleOpen = (value: SetStateAction<number>) => {
     setOpen(open === value ? 0 : value);

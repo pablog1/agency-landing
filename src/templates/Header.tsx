@@ -63,7 +63,7 @@ const Header = (props: HeaderProps) => {
         </li>
       </Sidebar>
       <section className="test">
-        <div className="bg-white text-black relative z-30 topbar">
+        <div className="bg-gray-300 text-black relative z-30 topbar">
           <div className="c-container text-center z-20 ">{props.topBar}</div>
         </div>
         <div

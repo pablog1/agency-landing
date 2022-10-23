@@ -5,7 +5,7 @@ import ReactMarkdown from 'react-markdown';
 const CaseStudies = ({ content }: any) => {
   return (
     <section id="case-studies" className="relative c-container pt-16 pb-4">
-      <h2 className="h2 text-center pb-8">Case studies</h2>
+      <h2 className="h2 text-center pb-8">Our Work</h2>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {Object.keys(content).map((keyName, i) => (
           <div
