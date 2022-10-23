@@ -90,7 +90,7 @@ const Post = (props: {
         siteName={props.siteName}
         topBar={props.topBar}
       />
-      <article className="c-container mb-8">
+      <article className="c-container !max-w-screen-2xl mb-8">
         <h1 className="h1 mt-32 mb-4">{props.article.title}</h1>
         <ReactMarkdown
           // eslint-disable-next-line react/no-children-prop

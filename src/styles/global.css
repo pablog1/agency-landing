@@ -21,3 +21,7 @@ p {@apply text-lg}
 .typing__cursor {
   color: white
 }
+
+.hover-state__link {
+  @apply hover:scale-105 duration-300 font-bold text-primary-400;
+}

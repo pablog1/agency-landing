@@ -17,6 +17,7 @@ module.exports = withMT({
     },
     extend: {
       screens: {
+        '3xl': '100rem',
         lgx2: '150rem',
       },
       colors: {

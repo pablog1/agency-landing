@@ -43,7 +43,7 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
         <div className="mt-6">
           <ReactMarkdown>{props.description}</ReactMarkdown>
         </div>
-        <p className="className=mt-6 font-bold pt-2 text-primary-400 hover:scale-105 w-fit duration-300">
+        <p className="className=mt-6 pt-2 w-fit hover-state__link">
           <Link href="/#footerContactForm">
             <a>{props.cta_text}</a>
           </Link>
