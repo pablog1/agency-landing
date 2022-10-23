@@ -4,7 +4,22 @@ import { PostArticle } from '../../components/postArticle';
 import { Footer } from '../../templates/Footer';
 import { Header } from '../../templates/Header';
 
-export const getServerSideProps = async ({ params }: any) => {
+export const getStaticPaths = async () => {
+  const files = fs.readdirSync('content/blog');
+  // console.log('files: ', files);
+  const paths = files.map((filename) => ({
+    params: {
+      blog: filename.replace('.json', ''),
+    },
+  }));
+
+  return {
+    paths,
+    fallback: false,
+  };
+};
+
+export const getStaticProps = async ({ params }: any) => {
   const settingsJsonFile = JSON.parse(
     fs.readFileSync('content/settings.json').toString()
   );
