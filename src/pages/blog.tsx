@@ -103,7 +103,7 @@ const Blog = (props: {
 
                 <Link
                   className=""
-                  href={`/case-study/${props.blogExtract[keyName][1].replace(
+                  href={`/blog/${props.blogExtract[keyName][1].replace(
                     '.json',
                     ''
                   )}`}
