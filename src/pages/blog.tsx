@@ -7,7 +7,7 @@ import ReactMarkdown from 'react-markdown';
 import { Footer } from '../templates/Footer';
 import { Header } from '../templates/Header';
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   const settingsJsonFile = JSON.parse(
     fs.readFileSync('content/settings.json').toString()
   );
