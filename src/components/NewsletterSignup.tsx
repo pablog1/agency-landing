@@ -22,7 +22,7 @@ const NewsletterSignup = () => (
           type="email"
           name="email"
           placeholder="Enter your email"
-          className="h-full rounded-md mr-2 outline-none placeholder:text-gray-600 pl-4 min-w-[300px]"
+          className="h-full rounded-md mr-2 outline-none placeholder:text-gray-600 pl-4 md:min-w-[300px]"
         ></input>
       </form>
       <Button className="bg-primary-500  text-base">Join</Button>
