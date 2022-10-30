@@ -45,7 +45,7 @@ const NewsletterSignup = () => {
               className="h-full rounded-md mr-2 outline-none placeholder:text-gray-600 pl-4 md:min-w-[300px]"
             />
             <Button type="submit" className="bg-primary-500  text-base">
-              Join mailchimp
+              Join
             </Button>
           </form>
         </div>
