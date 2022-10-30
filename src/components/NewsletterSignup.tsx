@@ -1,37 +1,19 @@
-import React, { useRef } from 'react';
+import React from 'react';
 
 import { Button } from '@material-tailwind/react';
 import Image from 'next/image';
-import Script from 'next/script';
+
+/*
+u=568090c8f03bb2376ff3c4b73
+id=d414d8b3dd
+https://digital.us21.list-manage.com/subscribe/post
+
+         type="email"
+              name="MERGE0"
+              id="MERGE0"
+*/
 
 const NewsletterSignup = () => {
-  const listId = 'XfPdpf';
-  const emailRef: any = useRef(null);
-
-  const onSubmit = (event: any) => {
-    event.preventDefault();
-    const email = emailRef.current?.value;
-
-    const data = {
-      g: listId,
-      email: email ?? '',
-    };
-
-    const urlData = new URLSearchParams(data);
-    const feedback = document.querySelector('.news-feedback');
-    fetch(`https://manage.kmail-lists.com/ajax/subscriptions/subscribe`, {
-      method: 'POST',
-      body: urlData,
-    }).then((response) => {
-      if (response.ok) {
-        if (feedback) {
-          feedback.innerHTML = 'Thank you!';
-        }
-      } else {
-        console.log('error');
-      }
-    });
-  };
   return (
     <section className="flex flex-col justify-center items-center  p-6 bg-black">
       <div className="pb-2 ">
@@ -48,21 +30,24 @@ const NewsletterSignup = () => {
         Subscribe to our Newsletter
       </p>
       <div>
-        <div className="flex flex-row justify-center ">
-          <form onSubmit={onSubmit}>
+        <div className="newsletter flex flex-row justify-center ">
+          <form
+            action="https://digital.us21.list-manage.com/subscribe/post"
+            method="POST"
+          >
+            <input type="hidden" name="u" value="568090c8f03bb2376ff3c4b73" />
+            <input type="hidden" name="id" value="d414d8b3dd"></input>
             <input
-              type="email"
-              required
-              name="email"
               placeholder="Enter your email"
-              ref={emailRef}
+              type="email"
+              name="MERGE0"
+              id="MERGE0"
               className="h-full rounded-md mr-2 outline-none placeholder:text-gray-600 pl-4 md:min-w-[300px]"
-            ></input>
+            />
             <Button type="submit" className="bg-primary-500  text-base">
-              Join
+              Join mailchimp
             </Button>
           </form>
-          <Script src="//www.klaviyo.com/media/js/public/klaviyo_subscribe.js" />
         </div>
         <div className="news-feedback text-white font-bold mt-4 text-center ">
           We will only send you good stuff!
